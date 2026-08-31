@@ -3,14 +3,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Collections Agent | Festy Job Finder</title>
 
     <meta name="description"
-        content="Collections Agent vacancy in South Africa. View job details and application information on Festy Job Finder.">
+        content="Collections Agent vacancy in South Africa. View the job details and application information on Festy Job Finder.">
 
     <style>
         * {
@@ -26,19 +25,13 @@
             line-height: 1.6;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
         header {
             background: #111;
             color: white;
             padding: 18px 7%;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -65,15 +58,8 @@
             color: #f58220;
         }
 
-        /* =========================
-           HERO
-        ========================= */
-
         .job-hero {
-            background: linear-gradient(135deg,
-                    #111 55%,
-                    #f58220 55%);
-
+            background: linear-gradient(135deg, #111 55%, #f58220 55%);
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -81,17 +67,12 @@
 
         .job-hero .tag {
             display: inline-block;
-
             background: #f58220;
             color: white;
-
             padding: 7px 16px;
-
             border-radius: 25px;
-
             font-size: 13px;
             font-weight: bold;
-
             margin-bottom: 15px;
         }
 
@@ -104,23 +85,15 @@
         .job-hero p {
             font-size: 18px;
             color: white;
-
             max-width: 700px;
             margin: auto;
         }
 
-        /* =========================
-           WHATSAPP BAR
-        ========================= */
-
         .whatsapp-bar {
             background: #25D366;
             color: white;
-
             text-align: center;
-
             padding: 15px 20px;
-
             font-size: 15px;
         }
 
@@ -135,55 +108,65 @@
             text-decoration: underline;
         }
 
-        /* =========================
-           ADVERTISEMENT
-        ========================= */
+        /* ADVERTISEMENT */
 
-        .ad-container {
+        .ad-wrapper {
             max-width: 1000px;
-            min-height: 100px;
-
             margin: 30px auto;
-            padding: 15px;
-
-            background: #eeeeee;
-            border: 1px solid #ddd;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: #999;
-            font-size: 13px;
-
-            text-align: center;
-        }
-
-        /* =========================
-           MAIN CONTENT
-        ========================= */
-
-        .container {
-            max-width: 1000px;
-
-            margin: 40px auto;
-
             padding: 0 20px;
         }
 
-        /* =========================
-           BACK LINK
-        ========================= */
+        .ad-container {
+            min-height: 110px;
+            background: #eeeeee;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .ad-link {
+            width: 100%;
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #777;
+        }
+
+        .ad-label {
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ad-link strong {
+            color: #f58220;
+            font-size: 15px;
+        }
+
+        .ad-link:hover strong {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
         .back-link {
             display: inline-block;
-
             margin-bottom: 20px;
-
             color: #f58220;
-
             text-decoration: none;
-
             font-weight: bold;
         }
 
@@ -191,50 +174,34 @@
             text-decoration: underline;
         }
 
-        /* =========================
-           JOB DETAILS
-        ========================= */
-
         .job-details {
             background: white;
-
             padding: 35px;
-
             border-radius: 15px;
-
-            box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.08);
-
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             border-top: 4px solid #f58220;
         }
 
         .job-details h2 {
             font-size: 27px;
-
             margin-bottom: 20px;
-
             color: #111;
         }
 
         .job-details h3 {
             font-size: 21px;
-
             margin-top: 30px;
-
             margin-bottom: 12px;
-
             color: #111;
         }
 
         .job-details p {
             color: #555;
-
             margin-bottom: 15px;
         }
 
         .job-details ul {
             margin-left: 22px;
-
             color: #555;
         }
 
@@ -242,146 +209,94 @@
             margin-bottom: 9px;
         }
 
-        /* =========================
-           JOB INFORMATION
-        ========================= */
-
         .job-info-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-
             margin-bottom: 30px;
         }
 
         .info-box {
             background: #fff7f0;
-
             border-radius: 10px;
-
             padding: 17px;
-
             text-align: center;
         }
 
         .info-box strong {
             display: block;
-
             color: #f58220;
-
             font-size: 13px;
-
             margin-bottom: 5px;
         }
 
         .info-box span {
             font-size: 14px;
-
             color: #333;
         }
 
-        /* =========================
-           APPLY BOX
-        ========================= */
-
         .apply-box {
             background: #111;
-
             color: white;
-
             padding: 35px;
-
             border-radius: 15px;
-
             text-align: center;
-
             margin-top: 35px;
         }
 
         .apply-box h2 {
             color: white;
-
             margin-bottom: 10px;
-
             font-size: 27px;
         }
 
         .apply-box p {
             color: #ddd;
-
             margin-bottom: 22px;
         }
 
         .apply-btn {
             display: inline-block;
-
             background: #f58220;
-
             color: white;
-
             text-decoration: none;
-
             padding: 15px 35px;
-
             border-radius: 30px;
-
             font-weight: bold;
-
             font-size: 16px;
-
             transition: 0.3s ease;
         }
 
         .apply-btn:hover {
             background: #d96d12;
-
             transform: translateY(-2px);
         }
 
-        /* =========================
-           WHATSAPP SECTION
-        ========================= */
-
         .join-section {
             background: #111;
-
             color: white;
-
             text-align: center;
-
             padding: 55px 20px;
-
             margin-top: 60px;
         }
 
         .join-section h2 {
             font-size: 28px;
-
             margin-bottom: 10px;
         }
 
         .join-section p {
             color: #ddd;
-
             margin-bottom: 22px;
         }
 
         .whatsapp-btn {
             display: inline-block;
-
             background: #25D366;
-
             color: white;
-
             text-decoration: none;
-
             padding: 14px 28px;
-
             border-radius: 30px;
-
             font-weight: bold;
         }
 
@@ -389,29 +304,17 @@
             background: #1ebe5d;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
         footer {
             background: #080808;
-
             color: #aaa;
-
             text-align: center;
-
             padding: 25px 20px;
-
             font-size: 14px;
         }
 
         footer span {
             color: #f58220;
         }
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 700px) {
 
@@ -455,22 +358,17 @@
                 width: 100%;
             }
 
-            .ad-container {
-                margin: 25px 15px;
+            .ad-wrapper {
+                margin: 25px auto;
             }
-
         }
     </style>
 
 </head>
 
-
 <body>
 
-
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header>
 
@@ -480,31 +378,23 @@
 
         <nav>
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="index.html#jobs">
-                Jobs
-            </a>
+            <a href="index.html#jobs">Jobs</a>
 
-            <a href="index.html#whatsapp">
-                WhatsApp
-            </a>
+            <a href="index.html#whatsapp">WhatsApp</a>
 
         </nav>
 
     </header>
 
 
-    <!-- =========================
-         JOB HERO
-    ========================= -->
+    <!-- HERO -->
 
     <section class="job-hero">
 
         <span class="tag">
-            COLLECTIONS
+            CUSTOMER SERVICE
         </span>
 
         <h1>
@@ -512,16 +402,14 @@
         </h1>
 
         <p>
-            Customer collections and account support
-            opportunity available in South Africa.
+            An opportunity for a motivated individual
+            to build a career in customer service and collections.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         WHATSAPP BAR
-    ========================= -->
+    <!-- WHATSAPP BAR -->
 
     <div class="whatsapp-bar">
 
@@ -536,44 +424,43 @@
     </div>
 
 
-    <!-- =========================
-         TOP ADVERTISEMENT
-    ========================= -->
+    <!-- ADVERTISEMENT 1 -->
 
-    <div class="ad-container">
+    <div class="ad-wrapper">
 
-        <!--
-            INSERT YOUR AD NETWORK CODE HERE
-        -->
+        <div class="ad-container">
 
-        ADVERTISEMENT
+            <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-link">
+
+                <span class="ad-label">
+                    Advertisement
+                </span>
+
+                <strong>
+                    View Advertisement
+                </strong>
+
+            </a>
+
+        </div>
 
     </div>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
+    <!-- MAIN CONTENT -->
 
     <main class="container">
 
-
         <a href="index.html" class="back-link">
-
             ← Back to Latest Vacancies
-
         </a>
 
 
         <div class="job-details">
 
-
-            <!-- =========================
-                 JOB INFORMATION
-            ========================= -->
+            <!-- JOB INFORMATION -->
 
             <div class="job-info-grid">
-
 
                 <div class="info-box">
 
@@ -613,40 +500,30 @@
 
                 </div>
 
-
             </div>
 
 
-            <!-- =========================
-                 ABOUT THE ROLE
-            ========================= -->
+            <!-- ABOUT -->
 
             <h2>
                 About the Role
             </h2>
 
             <p>
-
-                An opportunity is available for a
-                motivated Collections Agent to assist
-                with customer accounts and outstanding
-                payments.
-
+                A Collections Agent is responsible for
+                communicating with customers regarding outstanding
+                accounts and assisting them with suitable payment
+                arrangements.
             </p>
 
             <p>
-
-                The successful candidate will communicate
-                with customers professionally, assist with
-                account-related queries and work towards
-                resolving outstanding balances.
-
+                The role requires excellent communication,
+                professionalism and the ability to handle
+                customer conversations confidently.
             </p>
 
 
-            <!-- =========================
-                 RESPONSIBILITIES
-            ========================= -->
+            <!-- RESPONSIBILITIES -->
 
             <h3>
                 Key Responsibilities
@@ -655,49 +532,38 @@
             <ul>
 
                 <li>
-                    Contact customers regarding
-                    outstanding accounts.
+                    Contact customers regarding outstanding accounts.
                 </li>
 
                 <li>
-                    Discuss payment arrangements
-                    with customers.
+                    Discuss account information and payment options.
                 </li>
 
                 <li>
-                    Handle customer queries professionally.
+                    Assist customers with suitable payment arrangements.
                 </li>
 
                 <li>
-                    Maintain accurate customer
-                    account information.
-                </li>
-
-                <li>
-                    Follow up on outstanding payments.
-                </li>
-
-                <li>
-                    Negotiate suitable payment solutions
-                    where appropriate.
-                </li>
-
-                <li>
-                    Keep accurate records of customer
+                    Maintain professional and respectful customer
                     interactions.
                 </li>
 
                 <li>
-                    Work towards collection and
-                    performance targets.
+                    Record customer interactions accurately.
+                </li>
+
+                <li>
+                    Follow up on outstanding accounts.
+                </li>
+
+                <li>
+                    Work towards collection and performance targets.
                 </li>
 
             </ul>
 
 
-            <!-- =========================
-                 REQUIREMENTS
-            ========================= -->
+            <!-- REQUIREMENTS -->
 
             <h3>
                 Requirements
@@ -706,8 +572,11 @@
             <ul>
 
                 <li>
-                    Good verbal and written
-                    communication skills.
+                    Good verbal and written communication skills.
+                </li>
+
+                <li>
+                    Strong customer service skills.
                 </li>
 
                 <li>
@@ -715,44 +584,36 @@
                 </li>
 
                 <li>
-                    Customer service skills.
-                </li>
-
-                <li>
-                    Good negotiation and
-                    problem-solving abilities.
-                </li>
-
-                <li>
                     Ability to work under pressure.
                 </li>
 
                 <li>
-                    Basic computer literacy.
+                    Good listening and negotiation skills.
                 </li>
 
                 <li>
-                    Ability to meet deadlines
-                    and performance targets.
+                    Strong attention to detail.
                 </li>
 
                 <li>
-                    Ability to work independently
-                    and as part of a team.
+                    Ability to work independently and as part
+                    of a team.
                 </li>
 
             </ul>
 
 
-            <!-- =========================
-                 SKILLS
-            ========================= -->
+            <!-- SKILLS -->
 
             <h3>
                 Skills That Can Help You Succeed
             </h3>
 
             <ul>
+
+                <li>
+                    Customer service
+                </li>
 
                 <li>
                     Communication
@@ -763,19 +624,11 @@
                 </li>
 
                 <li>
-                    Active listening
-                </li>
-
-                <li>
-                    Customer service
-                </li>
-
-                <li>
                     Problem solving
                 </li>
 
                 <li>
-                    Attention to detail
+                    Active listening
                 </li>
 
                 <li>
@@ -785,29 +638,22 @@
             </ul>
 
 
-            <!-- =========================
-                 APPLICATION INFORMATION
-            ========================= -->
+            <!-- BEFORE APPLYING -->
 
             <h3>
                 Before You Apply
             </h3>
 
             <p>
-
-                Make sure your CV is updated and that
-                you meet the requirements of the vacancy
-                before submitting your application.
-
+                Ensure that your CV is updated and carefully
+                review the vacancy requirements before submitting
+                your application.
             </p>
-
 
         </div>
 
 
-        <!-- =========================
-             APPLY SECTION
-        ========================= -->
+        <!-- APPLY -->
 
         <div class="apply-box">
 
@@ -816,10 +662,8 @@
             </h2>
 
             <p>
-
-                Continue to the official application
-                page to submit your application.
-
+                Continue to the official application page
+                to submit your application.
             </p>
 
             <a href="https://careers.cartrack.co.za/?controller=Listings&method=view&listingid=bbead6b9-cc3f-40a6-b1a1-b3e66915a906"
@@ -831,28 +675,33 @@
 
         </div>
 
-
     </main>
 
 
-    <!-- =========================
-         MIDDLE ADVERTISEMENT
-    ========================= -->
+    <!-- ADVERTISEMENT 2 -->
 
-    <div class="ad-container">
+    <div class="ad-wrapper">
 
-        <!--
-            INSERT YOUR AD NETWORK CODE HERE
-        -->
+        <div class="ad-container">
 
-        ADVERTISEMENT
+            <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-link">
+
+                <span class="ad-label">
+                    Advertisement
+                </span>
+
+                <strong>
+                    View Advertisement
+                </strong>
+
+            </a>
+
+        </div>
 
     </div>
 
 
-    <!-- =========================
-         WHATSAPP SECTION
-    ========================= -->
+    <!-- WHATSAPP -->
 
     <section class="join-section">
 
@@ -861,10 +710,8 @@
         </h2>
 
         <p>
-
             Join our WhatsApp channel and get notified
             whenever new vacancies are added.
-
         </p>
 
         <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
@@ -877,9 +724,7 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -888,7 +733,6 @@
         All Rights Reserved.
 
     </footer>
-
 
 </body>
 

@@ -3,14 +3,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sales Consultant | Festy Job Finder</title>
 
     <meta name="description"
-        content="Sales Consultant vacancy in South Africa. View job details and application information on Festy Job Finder.">
+        content="Sales Consultant vacancy in South Africa. View the job details and application information on Festy Job Finder.">
 
     <style>
         * {
@@ -34,11 +33,9 @@
             background: #111;
             color: white;
             padding: 18px 7%;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -70,10 +67,7 @@
         ========================= */
 
         .job-hero {
-            background: linear-gradient(135deg,
-                    #111 55%,
-                    #f58220 55%);
-
+            background: linear-gradient(135deg, #111 55%, #f58220 55%);
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -81,17 +75,12 @@
 
         .job-hero .tag {
             display: inline-block;
-
             background: #f58220;
             color: white;
-
             padding: 7px 16px;
-
             border-radius: 25px;
-
             font-size: 13px;
             font-weight: bold;
-
             margin-bottom: 15px;
         }
 
@@ -104,7 +93,6 @@
         .job-hero p {
             font-size: 18px;
             color: white;
-
             max-width: 700px;
             margin: auto;
         }
@@ -116,11 +104,8 @@
         .whatsapp-bar {
             background: #25D366;
             color: white;
-
             text-align: center;
-
             padding: 15px 20px;
-
             font-size: 15px;
         }
 
@@ -139,24 +124,50 @@
            ADVERTISEMENT
         ========================= */
 
-        .ad-container {
+        .ad-wrapper {
             max-width: 1000px;
-            min-height: 100px;
-
             margin: 30px auto;
-            padding: 15px;
+            padding: 0 20px;
+        }
 
+        .ad-container {
+            min-height: 110px;
             background: #eeeeee;
             border: 1px solid #ddd;
-
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            color: #999;
-            font-size: 13px;
-
             text-align: center;
+            padding: 20px;
+        }
+
+        .ad-link {
+            width: 100%;
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #777;
+        }
+
+        .ad-label {
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ad-link strong {
+            color: #f58220;
+            font-size: 15px;
+        }
+
+        .ad-link:hover strong {
+            text-decoration: underline;
         }
 
         /* =========================
@@ -165,25 +176,15 @@
 
         .container {
             max-width: 1000px;
-
             margin: 40px auto;
-
             padding: 0 20px;
         }
 
-        /* =========================
-           BACK LINK
-        ========================= */
-
         .back-link {
             display: inline-block;
-
             margin-bottom: 20px;
-
             color: #f58220;
-
             text-decoration: none;
-
             font-weight: bold;
         }
 
@@ -197,44 +198,32 @@
 
         .job-details {
             background: white;
-
             padding: 35px;
-
             border-radius: 15px;
-
-            box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.08);
-
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             border-top: 4px solid #f58220;
         }
 
         .job-details h2 {
             font-size: 27px;
-
             margin-bottom: 20px;
-
             color: #111;
         }
 
         .job-details h3 {
             font-size: 21px;
-
             margin-top: 30px;
-
             margin-bottom: 12px;
-
             color: #111;
         }
 
         .job-details p {
             color: #555;
-
             margin-bottom: 15px;
         }
 
         .job-details ul {
             margin-left: 22px;
-
             color: #555;
         }
 
@@ -243,43 +232,32 @@
         }
 
         /* =========================
-           JOB INFORMATION
+           JOB INFO
         ========================= */
 
         .job-info-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-
             margin-bottom: 30px;
         }
 
         .info-box {
             background: #fff7f0;
-
             border-radius: 10px;
-
             padding: 17px;
-
             text-align: center;
         }
 
         .info-box strong {
             display: block;
-
             color: #f58220;
-
             font-size: 13px;
-
             margin-bottom: 5px;
         }
 
         .info-box span {
             font-size: 14px;
-
             color: #333;
         }
 
@@ -289,55 +267,38 @@
 
         .apply-box {
             background: #111;
-
             color: white;
-
             padding: 35px;
-
             border-radius: 15px;
-
             text-align: center;
-
             margin-top: 35px;
         }
 
         .apply-box h2 {
             color: white;
-
             margin-bottom: 10px;
-
             font-size: 27px;
         }
 
         .apply-box p {
             color: #ddd;
-
             margin-bottom: 22px;
         }
 
         .apply-btn {
             display: inline-block;
-
             background: #f58220;
-
             color: white;
-
             text-decoration: none;
-
             padding: 15px 35px;
-
             border-radius: 30px;
-
             font-weight: bold;
-
             font-size: 16px;
-
             transition: 0.3s ease;
         }
 
         .apply-btn:hover {
             background: #d96d12;
-
             transform: translateY(-2px);
         }
 
@@ -347,41 +308,29 @@
 
         .join-section {
             background: #111;
-
             color: white;
-
             text-align: center;
-
             padding: 55px 20px;
-
             margin-top: 60px;
         }
 
         .join-section h2 {
             font-size: 28px;
-
             margin-bottom: 10px;
         }
 
         .join-section p {
             color: #ddd;
-
             margin-bottom: 22px;
         }
 
         .whatsapp-btn {
             display: inline-block;
-
             background: #25D366;
-
             color: white;
-
             text-decoration: none;
-
             padding: 14px 28px;
-
             border-radius: 30px;
-
             font-weight: bold;
         }
 
@@ -395,13 +344,9 @@
 
         footer {
             background: #080808;
-
             color: #aaa;
-
             text-align: center;
-
             padding: 25px 20px;
-
             font-size: 14px;
         }
 
@@ -455,18 +400,15 @@
                 width: 100%;
             }
 
-            .ad-container {
-                margin: 25px 15px;
+            .ad-wrapper {
+                margin: 25px auto;
             }
-
         }
     </style>
 
 </head>
 
-
 <body>
-
 
     <!-- =========================
          HEADER
@@ -480,17 +422,11 @@
 
         <nav>
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="index.html#jobs">
-                Jobs
-            </a>
+            <a href="index.html#jobs">Jobs</a>
 
-            <a href="index.html#whatsapp">
-                WhatsApp
-            </a>
+            <a href="index.html#whatsapp">WhatsApp</a>
 
         </nav>
 
@@ -498,7 +434,7 @@
 
 
     <!-- =========================
-         JOB HERO
+         HERO
     ========================= -->
 
     <section class="job-hero">
@@ -513,7 +449,7 @@
 
         <p>
             Sales opportunity for motivated individuals
-            looking to grow their career in South Africa.
+            looking to grow their career.
         </p>
 
     </section>
@@ -537,16 +473,26 @@
 
 
     <!-- =========================
-         TOP ADVERTISEMENT
+         ADVERTISEMENT 1
     ========================= -->
 
-    <div class="ad-container">
+    <div class="ad-wrapper">
 
-        <!--
-            INSERT YOUR AD NETWORK CODE HERE
-        -->
+        <div class="ad-container">
 
-        ADVERTISEMENT
+            <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-link">
+
+                <span class="ad-label">
+                    Advertisement
+                </span>
+
+                <strong>
+                    View Advertisement
+                </strong>
+
+            </a>
+
+        </div>
 
     </div>
 
@@ -557,23 +503,17 @@
 
     <main class="container">
 
-
         <a href="index.html" class="back-link">
-
             ← Back to Latest Vacancies
-
         </a>
 
 
         <div class="job-details">
 
 
-            <!-- =========================
-                 JOB INFORMATION
-            ========================= -->
+            <!-- JOB INFORMATION -->
 
             <div class="job-info-grid">
-
 
                 <div class="info-box">
 
@@ -613,39 +553,30 @@
 
                 </div>
 
-
             </div>
 
 
-            <!-- =========================
-                 ABOUT THE ROLE
-            ========================= -->
+            <!-- ABOUT THE ROLE -->
 
             <h2>
                 About the Role
             </h2>
 
             <p>
-
-                An exciting opportunity is available for
-                a motivated Sales Consultant to join a
-                professional sales environment.
-
+                An exciting Sales Consultant opportunity is
+                available for an enthusiastic and customer-focused
+                individual.
             </p>
 
             <p>
-
-                The successful candidate will engage with
-                potential customers, understand their needs,
-                present suitable products or services and
-                build strong customer relationships.
-
+                The successful applicant will assist customers,
+                identify their needs and provide suitable
+                products and services while building strong
+                professional relationships.
             </p>
 
 
-            <!-- =========================
-                 RESPONSIBILITIES
-            ========================= -->
+            <!-- RESPONSIBILITIES -->
 
             <h3>
                 Key Responsibilities
@@ -654,18 +585,16 @@
             <ul>
 
                 <li>
-                    Identify and engage with potential
-                    customers.
+                    Engage with new and existing customers.
                 </li>
 
                 <li>
-                    Understand customer needs and
-                    recommend suitable solutions.
+                    Identify customer needs and provide
+                    appropriate solutions.
                 </li>
 
                 <li>
-                    Present products and services
-                    professionally.
+                    Promote products and services.
                 </li>
 
                 <li>
@@ -674,29 +603,22 @@
                 </li>
 
                 <li>
-                    Follow up with prospective customers.
+                    Follow up with potential customers.
                 </li>
 
                 <li>
-                    Maintain accurate customer records.
+                    Meet sales and performance targets.
                 </li>
 
                 <li>
-                    Work towards sales and performance
-                    targets.
-                </li>
-
-                <li>
-                    Provide excellent customer service
-                    throughout the sales process.
+                    Maintain professional customer service
+                    standards.
                 </li>
 
             </ul>
 
 
-            <!-- =========================
-                 REQUIREMENTS
-            ========================= -->
+            <!-- REQUIREMENTS -->
 
             <h3>
                 Requirements
@@ -709,15 +631,11 @@
                 </li>
 
                 <li>
-                    Customer-focused attitude.
+                    Customer-focused approach.
                 </li>
 
                 <li>
-                    Confident and professional approach.
-                </li>
-
-                <li>
-                    Good interpersonal skills.
+                    Strong interpersonal skills.
                 </li>
 
                 <li>
@@ -725,25 +643,22 @@
                 </li>
 
                 <li>
-                    Strong negotiation and
-                    persuasion skills.
+                    Good problem-solving abilities.
                 </li>
 
                 <li>
-                    Basic computer literacy.
+                    Professional and positive attitude.
                 </li>
 
                 <li>
-                    Ability to work independently
-                    and as part of a team.
+                    Ability to work independently and
+                    as part of a team.
                 </li>
 
             </ul>
 
 
-            <!-- =========================
-                 SKILLS
-            ========================= -->
+            <!-- SKILLS -->
 
             <h3>
                 Skills That Can Help You Succeed
@@ -752,11 +667,7 @@
             <ul>
 
                 <li>
-                    Communication
-                </li>
-
-                <li>
-                    Sales
+                    Sales and negotiation
                 </li>
 
                 <li>
@@ -764,7 +675,7 @@
                 </li>
 
                 <li>
-                    Negotiation
+                    Communication
                 </li>
 
                 <li>
@@ -772,30 +683,26 @@
                 </li>
 
                 <li>
-                    Problem solving
+                    Time management
                 </li>
 
                 <li>
-                    Time management
+                    Problem solving
                 </li>
 
             </ul>
 
 
-            <!-- =========================
-                 BEFORE APPLYING
-            ========================= -->
+            <!-- BEFORE APPLYING -->
 
             <h3>
                 Before You Apply
             </h3>
 
             <p>
-
-                Make sure your CV is updated and that
-                you meet the requirements of the vacancy
+                Make sure your CV is updated and that you
+                carefully review the vacancy requirements
                 before submitting your application.
-
             </p>
 
 
@@ -803,7 +710,7 @@
 
 
         <!-- =========================
-             APPLY SECTION
+             APPLY
         ========================= -->
 
         <div class="apply-box">
@@ -813,10 +720,8 @@
             </h2>
 
             <p>
-
-                Continue to the official application
-                page to submit your application.
-
+                Continue to the official application page
+                to submit your application.
             </p>
 
             <a href="https://prime.co.za/primecareer/new-business-professionals/" target="_blank"
@@ -828,27 +733,36 @@
 
         </div>
 
-
     </main>
 
 
     <!-- =========================
-         MIDDLE ADVERTISEMENT
+         ADVERTISEMENT 2
     ========================= -->
 
-    <div class="ad-container">
+    <div class="ad-wrapper">
 
-        <!--
-            INSERT YOUR AD NETWORK CODE HERE
-        -->
+        <div class="ad-container">
 
-        ADVERTISEMENT
+            <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-link">
+
+                <span class="ad-label">
+                    Advertisement
+                </span>
+
+                <strong>
+                    View Advertisement
+                </strong>
+
+            </a>
+
+        </div>
 
     </div>
 
 
     <!-- =========================
-         WHATSAPP SECTION
+         WHATSAPP
     ========================= -->
 
     <section class="join-section">
@@ -858,10 +772,8 @@
         </h2>
 
         <p>
-
             Join our WhatsApp channel and get notified
             whenever new vacancies are added.
-
         </p>
 
         <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
@@ -885,7 +797,6 @@
         All Rights Reserved.
 
     </footer>
-
 
 </body>
 
