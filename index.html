@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Festy Job Finder | Find Your Next Job</title>
+
+    <meta name="description"
+        content="Festy Job Finder - Discover the latest job opportunities and vacancies in South Africa.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: #f58220;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f58220;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: linear-gradient(135deg,
+                    #111 55%,
+                    #f58220 55%);
+
+            color: white;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 720px;
+            margin: auto;
+            color: white;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           WHATSAPP BAR
+        ========================= */
+
+        .whatsapp-bar {
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 15px;
+        }
+
+        .whatsapp-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .whatsapp-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           ADVERTISEMENT
+        ========================= */
+
+        .ad-container {
+            max-width: 1000px;
+            min-height: 100px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #eeeeee;
+            border: 1px solid #ddd;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #999;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* =========================
+           JOB SECTION
+        ========================= */
+
+        .jobs-section {
+            max-width: 1150px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 650px;
+
+            padding: 16px 22px;
+
+            border: 1px solid #ddd;
+            border-radius: 30px;
+
+            font-size: 16px;
+            outline: none;
+
+            background: white;
+
+            transition: 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #f58220;
+
+            box-shadow:
+                0 0 0 3px rgba(245, 130, 32, 0.1);
+        }
+
+        /* =========================
+           JOB GRID
+        ========================= */
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* =========================
+           JOB CARD
+        ========================= */
+
+        .job-card {
+            background: white;
+            border-radius: 14px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            border-top: 4px solid #f58220;
+
+            transition: 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.13);
+        }
+
+        /* =========================
+           JOB TAG
+        ========================= */
+
+        .job-tag {
+            display: inline-block;
+            width: fit-content;
+
+            background: #fff1e6;
+            color: #f58220;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           JOB TITLE
+        ========================= */
+
+        .job-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+            color: #111;
+        }
+
+        /* =========================
+           JOB INFO
+        ========================= */
+
+        .job-info {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           JOB DESCRIPTION
+        ========================= */
+
+        .job-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+
+            margin-bottom: 22px;
+
+            flex-grow: 1;
+        }
+
+        /* =========================
+           VIEW JOB BUTTON
+        ========================= */
+
+        .view-btn {
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+
+            padding: 12px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            background: #f58220;
+            color: white;
+
+            transition: 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background: #d96d12;
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           NO RESULTS
+        ========================= */
+
+        .no-results {
+            display: none;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            color: #666;
+        }
+
+        .no-results h3 {
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        /* =========================
+           WHATSAPP SECTION
+        ========================= */
+
+        .join-section {
+            background: #111;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            margin-top: 70px;
+        }
+
+        .join-section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .join-section p {
+            margin-bottom: 25px;
+
+            color: #ddd;
+
+            line-height: 1.6;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+
+            background: #25D366;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080808;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #f58220;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .jobs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 20px;
+
+                background:
+                    linear-gradient(160deg,
+                        #111 70%,
+                        #f58220 70%);
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ad-container {
+                margin: 25px 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+            Festy <span>Job Finder</span>
+        </div>
+
+        <nav>
+
+            <a href="#jobs">
+                Jobs
+            </a>
+
+            <a href="#whatsapp">
+                WhatsApp
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <h1>
+            FIND YOUR NEXT JOB
+        </h1>
+
+        <p>
+            Discover the latest job opportunities and take
+            the next step in your career with Festy Job Finder.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         WHATSAPP BAR
+    ========================= -->
+
+    <div class="whatsapp-bar">
+
+        💬 Get the latest vacancies on WhatsApp —
+
+        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer">
+
+            JOIN OUR WHATSAPP CHANNEL →
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         TOP ADVERTISEMENT
+    ========================= -->
+
+    <div class="ad-container">
+
+        <!--
+            REPLACE THIS WITH YOUR
+            AD NETWORK CODE
+        -->
+
+        ADVERTISEMENT
+
+    </div>
+
+
+    <!-- =========================
+         JOBS
+    ========================= -->
+
+    <section class="jobs-section" id="jobs">
+
+
+        <div class="section-title">
+
+            <h2>
+                Latest Vacancies
+            </h2>
+
+            <p>
+                Find current job opportunities and
+                take the next step in your career.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             SEARCH
+        ========================= -->
+
+        <div class="search-box">
+
+            <input type="text" id="searchInput" placeholder="🔍 Search jobs, locations or categories..."
+                onkeyup="searchJobs()">
+
+        </div>
+
+
+        <!-- =========================
+             JOB GRID
+        ========================= -->
+
+        <div class="jobs-grid" id="jobsGrid">
+
+
+            <!-- =========================
+                 JOB 1
+                 CALL CENTRE AGENT
+            ========================= -->
+
+            <div class="job-card">
+
+                <span class="job-tag">
+                    CALL CENTRE
+                </span>
+
+                <h3>
+                    Call Centre Agent
+                </h3>
+
+                <div class="job-info">
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
+                </div>
+
+                <p>
+
+                    Join a customer-focused team where
+                    you will assist customers, handle
+                    enquiries and provide professional
+                    service.
+
+                </p>
+
+                <a href="call-centre-agent.html" class="view-btn">
+
+                    VIEW JOB →
+
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 JOB 2
+                 SALES CONSULTANT
+            ========================= -->
+
+            <div class="job-card">
+
+                <span class="job-tag">
+                    SALES
+                </span>
+
+                <h3>
+                    Sales Consultant
+                </h3>
+
+                <div class="job-info">
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
+                </div>
+
+                <p>
+
+                    Assist customers, build strong
+                    relationships and provide suitable
+                    products and services while working
+                    towards sales targets.
+
+                </p>
+
+                <a href="sales-consultant.html" class="view-btn">
+
+                    VIEW JOB →
+
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 JOB 3
+                 COLLECTIONS AGENT
+            ========================= -->
+
+            <div class="job-card">
+
+                <span class="job-tag">
+                    COLLECTIONS
+                </span>
+
+                <h3>
+                    Collections Agent
+                </h3>
+
+                <div class="job-info">
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
+                </div>
+
+                <p>
+
+                    Communicate with customers regarding
+                    outstanding accounts, follow up on
+                    payments and work towards achieving
+                    collection targets.
+
+                </p>
+
+                <a href="collections-agent.html" class="view-btn">
+
+                    VIEW JOB →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             NO RESULTS
+        ========================= -->
+
+        <div class="no-results" id="noResults">
+
+            <h3>
+                No jobs found
+            </h3>
+
+            <p>
+                Try searching for another job title,
+                location or category.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         MIDDLE ADVERTISEMENT
+    ========================= -->
+
+    <div class="ad-container">
+
+        <!--
+            REPLACE THIS WITH YOUR
+            AD NETWORK CODE
+        -->
+
+        ADVERTISEMENT
+
+    </div>
+
+
+    <!-- =========================
+         WHATSAPP SECTION
+    ========================= -->
+
+    <section class="join-section" id="whatsapp">
+
+
+        <h2>
+            Don't Miss New Opportunities!
+        </h2>
+
+
+        <p>
+
+            Join our WhatsApp channel and get notified
+            whenever new vacancies are added.
+
+        </p>
+
+
+        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
+            class="whatsapp-btn">
+
+            💬 JOIN OUR WHATSAPP CHANNEL
+
+        </a>
+
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026
+        <span>Festy Job Finder</span>.
+        All Rights Reserved.
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT SEARCH
+    ========================= -->
+
+    <script>
+
+        function searchJobs() {
+
+            const input =
+                document
+                    .getElementById("searchInput")
+                    .value
+                    .toLowerCase()
+                    .trim();
+
+
+            const jobs =
+                document.querySelectorAll(".job-card");
+
+
+            const noResults =
+                document.getElementById("noResults");
+
+
+            let found = 0;
+
+
+            jobs.forEach(function (job) {
+
+                const text =
+                    job.innerText.toLowerCase();
+
+
+                if (text.includes(input)) {
+
+                    job.style.display = "flex";
+
+                    found++;
+
+                } else {
+
+                    job.style.display = "none";
+
+                }
+
+            });
+
+
+            if (found === 0) {
+
+                noResults.style.display = "block";
+
+            } else {
+
+                noResults.style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

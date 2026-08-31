@@ -1,0 +1,899 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Call Centre Agent | Festy Job Finder</title>
+
+    <meta name="description"
+        content="Call Centre Agent vacancy in South Africa. View job details and application information on Festy Job Finder.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #111;
+            color: white;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: #f58220;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f58220;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .job-hero {
+            background: linear-gradient(135deg,
+                    #111 55%,
+                    #f58220 55%);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .job-hero .tag {
+            display: inline-block;
+
+            background: #f58220;
+
+            color: white;
+
+            padding: 7px 16px;
+
+            border-radius: 25px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .job-hero h1 {
+            font-size: 45px;
+
+            margin-bottom: 12px;
+
+            color: white;
+        }
+
+        .job-hero p {
+            font-size: 18px;
+
+            color: white;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+        /* =========================
+           WHATSAPP BAR
+        ========================= */
+
+        .whatsapp-bar {
+            background: #25D366;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px 20px;
+
+            font-size: 15px;
+        }
+
+        .whatsapp-bar a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin-left: 8px;
+        }
+
+        /* =========================
+           ADVERTISEMENT
+        ========================= */
+
+        .ad-container {
+            max-width: 1000px;
+
+            min-height: 100px;
+
+            margin: 30px auto;
+
+            padding: 15px;
+
+            background: #eeeeee;
+
+            border: 1px solid #ddd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #999;
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .container {
+            max-width: 1000px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+        /* =========================
+           JOB CARD
+        ========================= */
+
+        .job-details {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            border-top: 4px solid #f58220;
+        }
+
+        .job-details h2 {
+            font-size: 27px;
+
+            margin-bottom: 20px;
+
+            color: #111;
+        }
+
+        .job-details h3 {
+            font-size: 21px;
+
+            margin-top: 30px;
+
+            margin-bottom: 12px;
+
+            color: #111;
+        }
+
+        .job-details p {
+            color: #555;
+
+            margin-bottom: 15px;
+        }
+
+        .job-details ul {
+            margin-left: 22px;
+
+            color: #555;
+        }
+
+        .job-details li {
+            margin-bottom: 9px;
+        }
+
+        /* =========================
+           JOB INFO
+        ========================= */
+
+        .job-info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background: #fff7f0;
+
+            border-radius: 10px;
+
+            padding: 17px;
+
+            text-align: center;
+        }
+
+        .info-box strong {
+            display: block;
+
+            color: #f58220;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+        .info-box span {
+            font-size: 14px;
+
+            color: #333;
+        }
+
+        /* =========================
+           APPLY BOX
+        ========================= */
+
+        .apply-box {
+            background: #111;
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            margin-top: 35px;
+        }
+
+        .apply-box h2 {
+            color: white;
+
+            margin-bottom: 10px;
+
+            font-size: 27px;
+        }
+
+        .apply-box p {
+            color: #ddd;
+
+            margin-bottom: 22px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+
+            background: #f58220;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 35px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            transition: 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background: #d96d12;
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .join-section {
+            background: #111;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 55px 20px;
+
+            margin-top: 60px;
+        }
+
+        .join-section h2 {
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .join-section p {
+            color: #ddd;
+
+            margin-bottom: 22px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+
+            background: #25D366;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-link {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            color: #f58220;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080808;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #f58220;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .job-hero {
+                padding: 55px 20px;
+            }
+
+            .job-hero h1 {
+                font-size: 34px;
+            }
+
+            .job-hero p {
+                font-size: 16px;
+            }
+
+            .job-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-details {
+                padding: 25px 20px;
+            }
+
+            .apply-box {
+                padding: 30px 20px;
+            }
+
+            .apply-btn {
+                width: 100%;
+            }
+
+            .ad-container {
+                margin: 25px 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+            Festy <span>Job Finder</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#jobs">
+                Jobs
+            </a>
+
+            <a href="index.html#whatsapp">
+                WhatsApp
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         JOB HERO
+    ========================= -->
+
+    <section class="job-hero">
+
+        <span class="tag">
+            CALL CENTRE
+        </span>
+
+        <h1>
+            Call Centre Agent
+        </h1>
+
+        <p>
+            Customer service and call centre opportunity
+            available in South Africa.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         WHATSAPP BAR
+    ========================= -->
+
+    <div class="whatsapp-bar">
+
+        💬 Get new vacancies on WhatsApp —
+
+        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer">
+
+            JOIN OUR WHATSAPP CHANNEL →
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         TOP AD
+    ========================= -->
+
+    <div class="ad-container">
+
+        <!--
+            INSERT YOUR AD NETWORK CODE HERE
+        -->
+
+        ADVERTISEMENT
+
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="container">
+
+
+        <a href="index.html" class="back-link">
+
+            ← Back to Latest Vacancies
+
+        </a>
+
+
+        <div class="job-details">
+
+
+            <!-- =========================
+                 JOB INFORMATION
+            ========================= -->
+
+            <div class="job-info-grid">
+
+
+                <div class="info-box">
+
+                    <strong>
+                        LOCATION
+                    </strong>
+
+                    <span>
+                        South Africa
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        JOB TYPE
+                    </strong>
+
+                    <span>
+                        Full-Time
+                    </span>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        CATEGORY
+                    </strong>
+
+                    <span>
+                        Call Centre
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+                 ABOUT THE ROLE
+            ========================= -->
+
+            <h2>
+                About the Role
+            </h2>
+
+            <p>
+
+                We are looking for motivated and
+                customer-focused individuals for a
+                Call Centre Agent opportunity.
+
+            </p>
+
+            <p>
+
+                The successful applicant will communicate
+                with customers, respond to enquiries and
+                provide professional assistance while
+                maintaining a high standard of customer
+                service.
+
+            </p>
+
+
+            <!-- =========================
+                 RESPONSIBILITIES
+            ========================= -->
+
+            <h3>
+                Key Responsibilities
+            </h3>
+
+            <ul>
+
+                <li>
+                    Answer incoming customer calls.
+                </li>
+
+                <li>
+                    Assist customers with enquiries
+                    and requests.
+                </li>
+
+                <li>
+                    Provide accurate information to
+                    customers.
+                </li>
+
+                <li>
+                    Handle customer concerns in a
+                    professional manner.
+                </li>
+
+                <li>
+                    Record and update customer
+                    information when required.
+                </li>
+
+                <li>
+                    Follow company procedures and
+                    customer service standards.
+                </li>
+
+                <li>
+                    Work towards service and
+                    performance targets.
+                </li>
+
+            </ul>
+
+
+            <!-- =========================
+                 REQUIREMENTS
+            ========================= -->
+
+            <h3>
+                Requirements
+            </h3>
+
+            <ul>
+
+                <li>
+                    Good communication skills.
+                </li>
+
+                <li>
+                    Professional telephone manner.
+                </li>
+
+                <li>
+                    Customer-focused attitude.
+                </li>
+
+                <li>
+                    Ability to work under pressure.
+                </li>
+
+                <li>
+                    Basic computer literacy.
+                </li>
+
+                <li>
+                    Good problem-solving skills.
+                </li>
+
+                <li>
+                    Ability to work effectively
+                    as part of a team.
+                </li>
+
+            </ul>
+
+
+            <!-- =========================
+                 SKILLS
+            ========================= -->
+
+            <h3>
+                Skills That Can Help You Succeed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Communication
+                </li>
+
+                <li>
+                    Active listening
+                </li>
+
+                <li>
+                    Customer service
+                </li>
+
+                <li>
+                    Problem solving
+                </li>
+
+                <li>
+                    Computer skills
+                </li>
+
+                <li>
+                    Time management
+                </li>
+
+            </ul>
+
+
+            <!-- =========================
+                 IMPORTANT
+            ========================= -->
+
+            <h3>
+                Before You Apply
+            </h3>
+
+            <p>
+
+                Please make sure your CV is updated and
+                that you meet the requirements of the
+                vacancy before submitting your application.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+             APPLY SECTION
+        ========================= -->
+
+        <div class="apply-box">
+
+            <h2>
+                Ready to Apply?
+            </h2>
+
+            <p>
+
+                Review the vacancy details and continue
+                to the official application page.
+
+            </p>
+
+            <!--
+                OFFICIAL APPLICATION LINK
+            -->
+
+            <a href="https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/details/Call-Centre-Agent_R52020?q=call%20centre"
+                target="_blank" rel="noopener noreferrer" class="apply-btn">
+
+                APPLY FOR THIS JOB →
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         MIDDLE AD
+    ========================= -->
+
+    <div class="ad-container">
+
+        <!--
+            INSERT YOUR AD NETWORK CODE HERE
+        -->
+
+        ADVERTISEMENT
+
+    </div>
+
+
+    <!-- =========================
+         WHATSAPP SECTION
+    ========================= -->
+
+    <section class="join-section">
+
+        <h2>
+            Don't Miss New Opportunities!
+        </h2>
+
+        <p>
+
+            Join our WhatsApp channel and get notified
+            whenever new vacancies are added.
+
+        </p>
+
+        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
+            class="whatsapp-btn">
+
+            💬 JOIN OUR WHATSAPP CHANNEL
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026
+        <span>Festy Job Finder</span>.
+        All Rights Reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
