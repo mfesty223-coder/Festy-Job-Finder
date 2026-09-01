@@ -681,7 +681,16 @@
 
     </footer>
     
-
+<script>
+    // Mobile Touch Listener for Monetag
+    document.addEventListener('touchstart', function () {
+        // This tells the browser that a finger swipe or tap should trigger the script
+        if (typeof window.open === 'function') {
+            // Automatically wakes up the Monetag popunder logic on the first finger touch
+            document.documentElement.click();
+        }
+    }, { once: true }); // '{ once: true }' ensures it only activates on the very first touch
+</script>
 </body>
 
 </html>
