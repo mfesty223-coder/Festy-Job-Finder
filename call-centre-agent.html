@@ -4,7 +4,7 @@
 
 <head>
 
-    <script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    ```
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -414,9 +414,7 @@
     <main class="container">
 
         <a href="index.html" class="back-link">
-
             ← Back to Latest Vacancies
-
         </a>
 
 
@@ -680,6 +678,78 @@
         All Rights Reserved.
 
     </footer>
+
+
+    <!-- =====================================================
+     MONETAG
+     LOAD ONLY ON THE FIRST USER TOUCH
+====================================================== -->
+
+    <script>
+
+        let adLoaded = false;
+
+        function loadAdvertisementOnce() {
+
+            /* Prevent the ad script from loading again */
+            if (adLoaded) {
+                return;
+            }
+
+            adLoaded = true;
+
+            /* Remove the listener immediately */
+            document.removeEventListener(
+                "touchstart",
+                loadAdvertisementOnce
+            );
+
+            document.removeEventListener(
+                "click",
+                loadAdvertisementOnce
+            );
+
+            /* Load Monetag only now */
+            const script = document.createElement("script");
+
+            script.dataset.zone = "11699245";
+            script.src = "https://al5sm.com/tag.min.js";
+
+            document.head.appendChild(script);
+        }
+
+
+        /*
+         * FIRST TOUCH ONLY
+         *
+         * Mobile:
+         * The first touch loads the advertisement.
+         *
+         * Desktop:
+         * The first click loads the advertisement.
+         *
+         * After that, the script cannot be loaded again
+         * by this page's JavaScript.
+         */
+
+        document.addEventListener(
+            "touchstart",
+            loadAdvertisementOnce,
+            {
+                once: true,
+                passive: true
+            }
+        );
+
+        document.addEventListener(
+            "click",
+            loadAdvertisementOnce,
+            {
+                once: true
+            }
+        );
+
+    </script>
     ```
 
 </body>
