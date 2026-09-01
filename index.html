@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-   
+
+    ```
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,15 +26,19 @@
             color: #222;
         }
 
-        /* HEADER */
+        /* =========================
+       HEADER
+    ========================= */
 
         header {
             background: #111;
             color: white;
             padding: 18px 7%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -59,12 +65,19 @@
             color: #f58220;
         }
 
-        /* HERO */
+
+        /* =========================
+       HERO
+    ========================= */
 
         .hero {
-            background: linear-gradient(135deg, #111 55%, #f58220 55%);
+            background: linear-gradient(135deg,
+                    #111 55%,
+                    #f58220 55%);
+
             color: white;
             text-align: center;
+
             padding: 80px 20px;
         }
 
@@ -82,13 +95,19 @@
             line-height: 1.6;
         }
 
-        /* WHATSAPP BAR */
+
+        /* =========================
+       WHATSAPP BAR
+    ========================= */
 
         .whatsapp-bar {
             background: #25D366;
             color: white;
+
             text-align: center;
+
             padding: 15px 20px;
+
             font-size: 15px;
         }
 
@@ -103,67 +122,28 @@
             text-decoration: underline;
         }
 
-        /* ADVERTISEMENT */
 
-        .ad-wrapper {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .ad-container {
-            min-height: 110px;
-            background: #eeeeee;
-            border: 1px solid #d5d5d5;
-            border-radius: 10px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-            padding: 20px;
-
-            text-decoration: none;
-            color: #777;
-
-            transition: 0.3s ease;
-        }
-
-        .ad-container:hover {
-            background: #e5e5e5;
-            border-color: #f58220;
-        }
-
-        .ad-label {
-            font-size: 11px;
-            color: #999;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .ad-container strong {
-            color: #f58220;
-            font-size: 15px;
-        }
-
-        /* JOB SECTION */
+        /* =========================
+       JOB SECTION
+    ========================= */
 
         .jobs-section {
             max-width: 1150px;
+
             margin: 50px auto;
+
             padding: 0 20px;
         }
 
         .section-title {
             text-align: center;
+
             margin-bottom: 30px;
         }
 
         .section-title h2 {
             font-size: 34px;
+
             margin-bottom: 8px;
         }
 
@@ -171,101 +151,168 @@
             color: #666;
         }
 
-        /* SEARCH */
+
+        /* =========================
+       SEARCH
+    ========================= */
 
         .search-box {
             display: flex;
+
             justify-content: center;
+
             margin-bottom: 35px;
         }
 
         .search-box input {
             width: 100%;
+
             max-width: 650px;
+
             padding: 16px 22px;
+
             border: 1px solid #ddd;
+
             border-radius: 30px;
+
             font-size: 16px;
+
             outline: none;
+
             background: white;
         }
 
         .search-box input:focus {
             border-color: #f58220;
-            box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.1);
+
+            box-shadow:
+                0 0 0 3px rgba(245, 130, 32, 0.1);
         }
 
-        /* JOB GRID */
+
+        /* =========================
+       JOB GRID
+    ========================= */
 
         .jobs-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
-        /* JOB CARD */
+
+        /* =========================
+       JOB CARD
+    ========================= */
 
         .job-card {
             background: white;
+
             border-radius: 14px;
+
             padding: 25px;
 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
 
-            border-top: 4px solid #f58220;
+            border-top:
+                4px solid #f58220;
 
             transition: 0.3s ease;
 
             display: flex;
+
             flex-direction: column;
         }
 
         .job-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.13);
         }
+
+
+        /* =========================
+       JOB TAG
+    ========================= */
 
         .job-tag {
             display: inline-block;
+
             width: fit-content;
 
             background: #fff1e6;
+
             color: #f58220;
 
             padding: 6px 12px;
+
             border-radius: 20px;
 
             font-size: 12px;
+
             font-weight: bold;
 
             margin-bottom: 15px;
         }
 
+
+        /* =========================
+       JOB TITLE
+    ========================= */
+
         .job-card h3 {
             font-size: 21px;
+
             margin-bottom: 12px;
         }
 
+
+        /* =========================
+       JOB INFO
+    ========================= */
+
         .job-info {
             color: #666;
+
             font-size: 14px;
+
             margin-bottom: 15px;
+
             line-height: 1.6;
         }
+
+
+        /* =========================
+       JOB DESCRIPTION
+    ========================= */
 
         .job-card p {
             color: #555;
+
             font-size: 15px;
+
             line-height: 1.6;
+
             margin-bottom: 22px;
+
             flex-grow: 1;
         }
 
-        /* BUTTON */
+
+        /* =========================
+       VIEW JOB BUTTON
+    ========================= */
 
         .view-btn {
             display: block;
+
             width: 100%;
+
             text-align: center;
 
             padding: 12px;
@@ -275,9 +322,11 @@
             text-decoration: none;
 
             font-weight: bold;
+
             font-size: 14px;
 
             background: #f58220;
+
             color: white;
 
             transition: 0.3s ease;
@@ -285,23 +334,35 @@
 
         .view-btn:hover {
             background: #d96d12;
+
             transform: translateY(-2px);
         }
 
-        /* NO RESULTS */
+
+        /* =========================
+       NO RESULTS
+    ========================= */
 
         .no-results {
             display: none;
+
             text-align: center;
+
             padding: 50px 20px;
+
             color: #666;
         }
 
-        /* WHATSAPP SECTION */
+
+        /* =========================
+       WHATSAPP SECTION
+    ========================= */
 
         .join-section {
             background: #111;
+
             color: white;
+
             text-align: center;
 
             padding: 60px 20px;
@@ -311,12 +372,15 @@
 
         .join-section h2 {
             font-size: 30px;
+
             margin-bottom: 12px;
         }
 
         .join-section p {
             margin-bottom: 25px;
+
             color: #ddd;
+
             line-height: 1.6;
         }
 
@@ -324,6 +388,7 @@
             display: inline-block;
 
             background: #25D366;
+
             color: white;
 
             text-decoration: none;
@@ -333,6 +398,7 @@
             border-radius: 30px;
 
             font-weight: bold;
+
             font-size: 16px;
 
             transition: 0.3s ease;
@@ -340,13 +406,18 @@
 
         .whatsapp-btn:hover {
             background: #1ebe5d;
+
             transform: translateY(-2px);
         }
 
-        /* FOOTER */
+
+        /* =========================
+       FOOTER
+    ========================= */
 
         footer {
             background: #080808;
+
             color: #aaa;
 
             text-align: center;
@@ -360,20 +431,28 @@
             color: #f58220;
         }
 
-        /* TABLET */
+
+        /* =========================
+       TABLET
+    ========================= */
 
         @media (max-width: 900px) {
 
             .jobs-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .hero h1 {
                 font-size: 42px;
             }
+
         }
 
-        /* MOBILE */
+
+        /* =========================
+       MOBILE
+    ========================= */
 
         @media (max-width: 600px) {
 
@@ -392,7 +471,8 @@
             .hero {
                 padding: 60px 20px;
 
-                background: linear-gradient(160deg,
+                background:
+                    linear-gradient(160deg,
                         #111 70%,
                         #f58220 70%);
             }
@@ -409,37 +489,45 @@
                 grid-template-columns: 1fr;
             }
 
-            .ad-wrapper {
-                margin: 25px auto;
-            }
         }
     </style>
+    ```
 
 </head>
 
 <body>
 
-
-    <!-- HEADER -->
+    ```
+    <!-- =========================
+     HEADER
+========================= -->
 
     <header>
 
         <div class="logo">
+
             Festy <span>Job Finder</span>
+
         </div>
 
         <nav>
 
-            <a href="#jobs">Jobs</a>
+            <a href="#jobs">
+                Jobs
+            </a>
 
-            <a href="#whatsapp">WhatsApp</a>
+            <a href="#whatsapp">
+                WhatsApp
+            </a>
 
         </nav>
 
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+     HERO
+========================= -->
 
     <section class="hero">
 
@@ -455,7 +543,9 @@
     </section>
 
 
-    <!-- WHATSAPP BAR -->
+    <!-- =========================
+     WHATSAPP BAR
+========================= -->
 
     <div class="whatsapp-bar">
 
@@ -471,28 +561,8 @@
 
 
     <!-- =========================
-         ADVERTISEMENT 1
-         YOUR OMG10 LINK
-    ========================= -->
-
-    <div class="ad-wrapper">
-
-        <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-container">
-
-            <span class="ad-label">
-                ADVERTISEMENT
-            </span>
-
-            <strong>
-                Click Here
-            </strong>
-
-        </a>
-
-    </div>
-
-
-    <!-- JOBS -->
+     JOBS
+========================= -->
 
     <section class="jobs-section" id="jobs">
 
@@ -510,7 +580,9 @@
         </div>
 
 
-        <!-- SEARCH -->
+        <!-- =========================
+         SEARCH
+    ========================= -->
 
         <div class="search-box">
 
@@ -520,14 +592,16 @@
         </div>
 
 
-        <!-- JOB GRID -->
+        <!-- =========================
+         JOB GRID
+    ========================= -->
 
         <div class="jobs-grid" id="jobsGrid">
 
 
             <!-- =========================
-                 CALL CENTRE AGENT
-            ========================= -->
+             CALL CENTRE AGENT
+        ========================= -->
 
             <div class="job-card" data-job="call centre agent customer service south africa">
 
@@ -540,13 +614,19 @@
                 </h3>
 
                 <div class="job-info">
-                    📍 South Africa &nbsp; | &nbsp; 💼 Full-Time
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
                 </div>
 
                 <p>
+
                     Assist customers, handle enquiries,
                     provide professional support and build
                     valuable customer service experience.
+
                 </p>
 
                 <a href="call-centre-agent.html" class="view-btn">
@@ -559,8 +639,8 @@
 
 
             <!-- =========================
-                 SALES CONSULTANT
-            ========================= -->
+             SALES CONSULTANT
+        ========================= -->
 
             <div class="job-card" data-job="sales consultant sales south africa">
 
@@ -573,13 +653,19 @@
                 </h3>
 
                 <div class="job-info">
-                    📍 South Africa &nbsp; | &nbsp; 💼 Full-Time
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
                 </div>
 
                 <p>
+
                     Work with customers, build strong
                     relationships and contribute towards
                     sales and performance targets.
+
                 </p>
 
                 <a href="sales-consultant.html" class="view-btn">
@@ -592,8 +678,8 @@
 
 
             <!-- =========================
-                 COLLECTIONS AGENT
-            ========================= -->
+             COLLECTIONS AGENT
+        ========================= -->
 
             <div class="job-card" data-job="collections agent collections customer service south africa">
 
@@ -606,13 +692,19 @@
                 </h3>
 
                 <div class="job-info">
-                    📍 South Africa &nbsp; | &nbsp; 💼 Full-Time
+
+                    📍 South Africa
+                    &nbsp; | &nbsp;
+                    💼 Full-Time
+
                 </div>
 
                 <p>
+
                     Communicate professionally with customers,
                     assist with account-related matters and
                     help manage outstanding accounts.
+
                 </p>
 
                 <a href="collections-agent.html" class="view-btn">
@@ -627,7 +719,9 @@
         </div>
 
 
-        <!-- NO RESULTS -->
+        <!-- =========================
+         NO RESULTS
+    ========================= -->
 
         <div class="no-results" id="noResults">
 
@@ -642,32 +736,13 @@
 
         </div>
 
+
     </section>
 
 
     <!-- =========================
-         ADVERTISEMENT 2
-         YOUR OMG10 LINK
-    ========================= -->
-
-    <div class="ad-wrapper">
-
-        <a href="https://omg10.com/4/11695136" target="_blank" rel="noopener noreferrer sponsored" class="ad-container">
-
-            <span class="ad-label">
-                ADVERTISEMENT
-            </span>
-
-            <strong>
-                Click Here
-            </strong>
-
-        </a>
-
-    </div>
-
-
-    <!-- WHATSAPP SECTION -->
+     WHATSAPP SECTION
+========================= -->
 
     <section class="join-section" id="whatsapp">
 
@@ -690,7 +765,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+     FOOTER
+========================= -->
 
     <footer>
 
@@ -701,7 +778,9 @@
     </footer>
 
 
-    <!-- SEARCH -->
+    <!-- =========================
+     SEARCH SCRIPT
+========================= -->
 
     <script>
 
@@ -714,11 +793,14 @@
                     .toLowerCase()
                     .trim();
 
+
             const jobs =
                 document.querySelectorAll(".job-card");
 
+
             const noResults =
                 document.getElementById("noResults");
+
 
             let found = 0;
 
@@ -731,6 +813,7 @@
                         " " +
                         job.dataset.job
                     ).toLowerCase();
+
 
                 if (text.includes(input)) {
 
@@ -760,8 +843,8 @@
         }
 
     </script>
+    ```
 
-<script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 </body>
 
 </html>
