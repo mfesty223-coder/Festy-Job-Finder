@@ -3,8 +3,9 @@
 <html lang="en">
 
 <head>
-<script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-<script>(function (s) { s.dataset.zone = '11700434', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+    <script>(function (s) { s.dataset.zone = '11700434', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,10 +27,6 @@
             color: #222;
             line-height: 1.6;
         }
-
-        /* =========================
-           HEADER
-        ========================= */
 
         header {
             background: #111;
@@ -64,10 +61,6 @@
             color: #f58220;
         }
 
-        /* =========================
-           HERO
-        ========================= */
-
         .job-hero {
             background: linear-gradient(135deg, #111 55%, #f58220 55%);
             color: white;
@@ -99,10 +92,6 @@
             margin: auto;
         }
 
-        /* =========================
-           WHATSAPP BAR
-        ========================= */
-
         .whatsapp-bar {
             background: #25D366;
             color: white;
@@ -122,10 +111,6 @@
             text-decoration: underline;
         }
 
-        /* =========================
-           MAIN CONTENT
-        ========================= */
-
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -143,10 +128,6 @@
         .back-link:hover {
             text-decoration: underline;
         }
-
-        /* =========================
-           JOB DETAILS
-        ========================= */
 
         .job-details {
             background: white;
@@ -183,10 +164,6 @@
             margin-bottom: 9px;
         }
 
-        /* =========================
-           JOB INFO
-        ========================= */
-
         .job-info-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -212,10 +189,6 @@
             font-size: 14px;
             color: #333;
         }
-
-        /* =========================
-           APPLY BOX
-        ========================= */
 
         .apply-box {
             background: #111;
@@ -247,16 +220,14 @@
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .apply-btn:hover {
             background: #d96d12;
             transform: translateY(-2px);
         }
-
-        /* =========================
-           WHATSAPP SECTION
-        ========================= */
 
         .join-section {
             background: #111;
@@ -290,10 +261,6 @@
             background: #1ebe5d;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
         footer {
             background: #080808;
             color: #aaa;
@@ -305,10 +272,6 @@
         footer span {
             color: #f58220;
         }
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 700px) {
 
@@ -358,10 +321,6 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
-
     <header>
 
         <div class="logo">
@@ -381,10 +340,6 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
-
     <section class="job-hero">
 
         <span class="tag">
@@ -403,10 +358,6 @@
     </section>
 
 
-    <!-- =========================
-         WHATSAPP BAR
-    ========================= -->
-
     <div class="whatsapp-bar">
 
         💬 Get new vacancies on WhatsApp —
@@ -420,10 +371,6 @@
     </div>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
-
     <main class="container">
 
         <a href="index.html" class="back-link">
@@ -432,8 +379,6 @@
 
 
         <div class="job-details">
-
-            <!-- JOB INFORMATION -->
 
             <div class="job-info-grid">
 
@@ -478,8 +423,6 @@
             </div>
 
 
-            <!-- ABOUT THE ROLE -->
-
             <h2>
                 About the Role
             </h2>
@@ -498,8 +441,6 @@
                 multiple tasks in a fast-paced environment.
             </p>
 
-
-            <!-- QUALIFICATIONS -->
 
             <h3>
                 Qualifications
@@ -532,8 +473,6 @@
 
             </ul>
 
-
-            <!-- RESPONSIBILITIES -->
 
             <h3>
                 Key Responsibilities
@@ -587,8 +526,6 @@
             </ul>
 
 
-            <!-- COMPENSATION -->
-
             <h3>
                 Compensation
             </h3>
@@ -598,8 +535,6 @@
                 depending on experience.
             </p>
 
-
-            <!-- DETAILS -->
 
             <h3>
                 Additional Details
@@ -626,8 +561,6 @@
             </ul>
 
 
-            <!-- BEFORE APPLYING -->
-
             <h3>
                 Before You Apply
             </h3>
@@ -641,10 +574,6 @@
         </div>
 
 
-        <!-- =========================
-             APPLY
-        ========================= -->
-
         <div class="apply-box">
 
             <h2>
@@ -656,21 +585,18 @@
                 to submit your application.
             </p>
 
-            <a href="https://somewhere.com/jobs/apply?slug=17465457758860054351DSR" target="_blank"
-                rel="noopener noreferrer" class="apply-btn">
+            <!-- APPLY BUTTON -->
+
+            <button type="button" class="apply-btn" onclick="applyForJob()">
 
                 APPLY FOR THIS JOB →
 
-            </a>
+            </button>
 
         </div>
 
     </main>
 
-
-    <!-- =========================
-         WHATSAPP
-    ========================= -->
 
     <section class="join-section">
 
@@ -693,10 +619,6 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
     <footer>
 
         © 2026
@@ -704,6 +626,30 @@
         All Rights Reserved.
 
     </footer>
+
+
+    <!-- =========================
+         APPLY JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function applyForJob() {
+
+            // Open Monetag advertisement in a new tab
+            window.open(
+                'https://omg10.com/4/11707190',
+                '_blank'
+            );
+
+            // Open the official job application
+            // in the current tab
+            window.location.href =
+                'https://somewhere.com/jobs/apply?slug=17465457758860054351DSR';
+
+        }
+
+    </script>
 
 </body>
 

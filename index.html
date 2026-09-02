@@ -3,6 +3,14 @@
 <html lang="en">
 
 <head>
+
+    <script>
+        (function (s) {
+            s.dataset.zone = '11700434',
+                s.src = 'https://nap5k.com/tag.min.js'
+        })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -227,6 +235,7 @@
             background: #f58220;
             color: white;
             transition: 0.3s ease;
+            cursor: pointer;
         }
 
         .view-btn:hover {
@@ -461,7 +470,7 @@
 
                 </p>
 
-                <a href="call-centre-agent.html" class="view-btn">
+                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('call-centre-agent.html')">
 
                     VIEW JOB →
 
@@ -498,7 +507,7 @@
 
                 </p>
 
-                <a href="sales-consultant.html" class="view-btn">
+                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('sales-consultant.html')">
 
                     VIEW JOB →
 
@@ -535,7 +544,7 @@
 
                 </p>
 
-                <a href="collections-agent.html" class="view-btn">
+                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('collections-agent.html')">
 
                     VIEW JOB →
 
@@ -575,7 +584,7 @@
 
                 </p>
 
-                <a href="admin-assistant.html" class="view-btn">
+                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('admin-assistant.html')">
 
                     VIEW JOB →
 
@@ -640,9 +649,38 @@
     </footer>
 
 
-    <!-- SEARCH SCRIPT -->
+    <!-- JAVASCRIPT -->
 
     <script>
+
+        /*
+         * VIEW JOB FUNCTION
+         *
+         * When the visitor clicks VIEW JOB:
+         * 1. Open the advertisement URL in a new tab.
+         * 2. Open the selected job page in the current tab.
+         */
+
+        function viewJob(jobPage) {
+
+            const adUrl = "https://omg10.com/4/11707190";
+
+            // Open advertisement
+            window.open(
+                adUrl,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            // Open the actual job page
+            window.location.href = jobPage;
+
+        }
+
+
+        /*
+         * JOB SEARCH FUNCTION
+         */
 
         function searchJobs() {
 
@@ -703,6 +741,7 @@
         }
 
     </script>
+
 
 </body>
 

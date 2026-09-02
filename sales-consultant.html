@@ -1,9 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    <script>(function (s) { s.dataset.zone = '11700434', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+    <script>
+        (function (s) {
+            s.dataset.zone = '11700434';
+            s.src = 'https://nap5k.com/tag.min.js';
+
+            (document.documentElement || document.body)
+                .appendChild(s);
+        })(document.createElement('script'));
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,9 +36,7 @@
             line-height: 1.6;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             background: #111;
@@ -63,12 +71,13 @@
             color: #f58220;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .job-hero {
-            background: linear-gradient(135deg, #111 55%, #f58220 55%);
+            background: linear-gradient(135deg,
+                    #111 55%,
+                    #f58220 55%);
+
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -98,9 +107,7 @@
             margin: auto;
         }
 
-        /* =========================
-           WHATSAPP BAR
-        ========================= */
+        /* WHATSAPP BAR */
 
         .whatsapp-bar {
             background: #25D366;
@@ -121,9 +128,7 @@
             text-decoration: underline;
         }
 
-        /* =========================
-           MAIN CONTENT
-        ========================= */
+        /* MAIN CONTENT */
 
         .container {
             max-width: 1000px;
@@ -143,9 +148,7 @@
             text-decoration: underline;
         }
 
-        /* =========================
-           JOB DETAILS
-        ========================= */
+        /* JOB DETAILS */
 
         .job-details {
             background: white;
@@ -182,9 +185,7 @@
             margin-bottom: 9px;
         }
 
-        /* =========================
-           JOB INFO
-        ========================= */
+        /* JOB INFO */
 
         .job-info-grid {
             display: grid;
@@ -212,9 +213,7 @@
             color: #333;
         }
 
-        /* =========================
-           APPLY BOX
-        ========================= */
+        /* APPLY BOX */
 
         .apply-box {
             background: #111;
@@ -236,16 +235,20 @@
             margin-bottom: 22px;
         }
 
+        /* APPLY BUTTON */
+
         .apply-btn {
             display: inline-block;
             background: #f58220;
             color: white;
-            text-decoration: none;
             padding: 15px 35px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .apply-btn:hover {
@@ -253,9 +256,7 @@
             transform: translateY(-2px);
         }
 
-        /* =========================
-           WHATSAPP SECTION
-        ========================= */
+        /* WHATSAPP SECTION */
 
         .join-section {
             background: #111;
@@ -289,9 +290,7 @@
             background: #1ebe5d;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background: #080808;
@@ -305,9 +304,7 @@
             color: #f58220;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -350,6 +347,7 @@
             .apply-btn {
                 width: 100%;
             }
+
         }
     </style>
 
@@ -357,9 +355,7 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header>
 
@@ -369,20 +365,24 @@
 
         <nav>
 
-            <a href="index.html">Home</a>
+            <a href="index.html">
+                Home
+            </a>
 
-            <a href="index.html#jobs">Jobs</a>
+            <a href="index.html#jobs">
+                Jobs
+            </a>
 
-            <a href="index.html#whatsapp">WhatsApp</a>
+            <a href="index.html#whatsapp">
+                WhatsApp
+            </a>
 
         </nav>
 
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <section class="job-hero">
 
@@ -402,9 +402,7 @@
     </section>
 
 
-    <!-- =========================
-         WHATSAPP BAR
-    ========================= -->
+    <!-- WHATSAPP BAR -->
 
     <div class="whatsapp-bar">
 
@@ -419,14 +417,14 @@
     </div>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
+    <!-- MAIN CONTENT -->
 
     <main class="container">
 
         <a href="index.html" class="back-link">
+
             ← Back to Latest Vacancies
+
         </a>
 
 
@@ -629,9 +627,7 @@
         </div>
 
 
-        <!-- =========================
-             APPLY
-        ========================= -->
+        <!-- APPLY SECTION -->
 
         <div class="apply-box">
 
@@ -644,21 +640,21 @@
                 to submit your application.
             </p>
 
-            <a href="https://prime.co.za/primecareer/new-business-professionals/" target="_blank"
-                rel="noopener noreferrer" class="apply-btn">
+
+            <!-- JAVASCRIPT APPLY BUTTON -->
+
+            <button type="button" class="apply-btn" onclick="applyForJob()">
 
                 APPLY FOR THIS JOB →
 
-            </a>
+            </button>
 
         </div>
 
     </main>
 
 
-    <!-- =========================
-         WHATSAPP
-    ========================= -->
+    <!-- WHATSAPP SECTION -->
 
     <section class="join-section">
 
@@ -681,9 +677,7 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -692,6 +686,33 @@
         All Rights Reserved.
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function applyForJob() {
+
+            /*
+             * Open the advertisement in a new tab.
+             */
+            window.open(
+                'https://omg10.com/4/11707190',
+                '_blank'
+            );
+
+
+            /*
+             * Open the Prime company application
+             * page in the current tab.
+             */
+            window.location.href =
+                'https://prime.co.za/primecareer/new-business-professionals/';
+
+        }
+
+    </script>
 
 </body>
 

@@ -1,11 +1,20 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    <script>(function (s) { s.dataset.zone = '11700434', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <!-- Monetag Script -->
+    <script>
+        (function (s) {
+            s.dataset.zone = '11700434';
+            s.src = 'https://nap5k.com/tag.min.js';
+
+            (document.documentElement || document.body)
+                .appendChild(s);
+        })(document.createElement('script'));
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -150,6 +159,7 @@
             border-radius: 15px;
             box-shadow:
                 0 5px 20px rgba(0, 0, 0, 0.08);
+
             border-top: 4px solid #f58220;
         }
 
@@ -230,16 +240,20 @@
             margin-bottom: 22px;
         }
 
+        /* APPLY BUTTON */
+
         .apply-btn {
             display: inline-block;
             background: #f58220;
             color: white;
-            text-decoration: none;
             padding: 15px 35px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .apply-btn:hover {
@@ -341,13 +355,12 @@
 
         }
     </style>
-    ```
 
 </head>
 
+
 <body>
 
-    ```
     <!-- HEADER -->
 
     <header>
@@ -422,6 +435,7 @@
 
 
         <div class="job-details">
+
 
             <!-- JOB INFORMATION -->
 
@@ -637,12 +651,14 @@
                 to the official FirstRand application page.
             </p>
 
-            <a href="https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/details/Call-Centre-Agent_R52020?q=call%20centre"
-                target="_blank" rel="noopener noreferrer" class="apply-btn">
+
+            <!-- JAVASCRIPT APPLY BUTTON -->
+
+            <button type="button" class="apply-btn" onclick="applyForJob()">
 
                 APPLY FOR THIS JOB →
 
-            </a>
+            </button>
 
         </div>
 
@@ -681,17 +697,55 @@
         All Rights Reserved.
 
     </footer>
-    
-<script>
-    // Mobile Touch Listener for Monetag
-    document.addEventListener('touchstart', function () {
-        // This tells the browser that a finger swipe or tap should trigger the script
-        if (typeof window.open === 'function') {
-            // Automatically wakes up the Monetag popunder logic on the first finger touch
-            document.documentElement.click();
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function applyForJob() {
+
+            /*
+             * Open the advertisement in a new tab.
+             */
+            window.open(
+                'https://omg10.com/4/11707190',
+                '_blank'
+            );
+
+
+            /*
+             * Open the official FirstRand
+             * application page in the current tab.
+             */
+            window.location.href =
+                'https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/details/Call-Centre-Agent_R52020?q=call%20centre';
+
         }
-    }, { once: true }); // '{ once: true }' ensures it only activates on the very first touch
-</script>
+
+
+        /*
+         * Mobile touch listener for Monetag.
+         */
+
+        document.addEventListener(
+            'touchstart',
+            function () {
+
+                if (typeof window.open === 'function') {
+
+                    document.documentElement.click();
+
+                }
+
+            },
+            {
+                once: true
+            }
+        );
+
+    </script>
+
 </body>
 
 </html>

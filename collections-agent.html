@@ -3,8 +3,17 @@
 <html lang="en">
 
 <head>
-    <script>(function (s) { s.dataset.zone = '11699245', s.src = 'https://al5sm.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    <script>(function (s) { s.dataset.zone = '11700434', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+    <script>
+        (function (s) {
+            s.dataset.zone = '11700434';
+            s.src = 'https://nap5k.com/tag.min.js';
+
+            (document.documentElement || document.body)
+                .appendChild(s);
+        })(document.createElement('script'));
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,6 +35,8 @@
             color: #222;
             line-height: 1.6;
         }
+
+        /* HEADER */
 
         header {
             background: #111;
@@ -60,8 +71,13 @@
             color: #f58220;
         }
 
+        /* HERO */
+
         .job-hero {
-            background: linear-gradient(135deg, #111 55%, #f58220 55%);
+            background: linear-gradient(135deg,
+                    #111 55%,
+                    #f58220 55%);
+
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -91,6 +107,8 @@
             margin: auto;
         }
 
+        /* WHATSAPP BAR */
+
         .whatsapp-bar {
             background: #25D366;
             color: white;
@@ -110,6 +128,8 @@
             text-decoration: underline;
         }
 
+        /* MAIN CONTENT */
+
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -127,6 +147,8 @@
         .back-link:hover {
             text-decoration: underline;
         }
+
+        /* JOB DETAILS */
 
         .job-details {
             background: white;
@@ -163,6 +185,8 @@
             margin-bottom: 9px;
         }
 
+        /* JOB INFO */
+
         .job-info-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -189,6 +213,8 @@
             color: #333;
         }
 
+        /* APPLY BOX */
+
         .apply-box {
             background: #111;
             color: white;
@@ -209,22 +235,28 @@
             margin-bottom: 22px;
         }
 
+        /* APPLY BUTTON */
+
         .apply-btn {
             display: inline-block;
             background: #f58220;
             color: white;
-            text-decoration: none;
             padding: 15px 35px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .apply-btn:hover {
             background: #d96d12;
             transform: translateY(-2px);
         }
+
+        /* WHATSAPP SECTION */
 
         .join-section {
             background: #111;
@@ -258,6 +290,8 @@
             background: #1ebe5d;
         }
 
+        /* FOOTER */
+
         footer {
             background: #080808;
             color: #aaa;
@@ -269,6 +303,8 @@
         footer span {
             color: #f58220;
         }
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -311,6 +347,7 @@
             .apply-btn {
                 width: 100%;
             }
+
         }
     </style>
 
@@ -328,11 +365,17 @@
 
         <nav>
 
-            <a href="index.html">Home</a>
+            <a href="index.html">
+                Home
+            </a>
 
-            <a href="index.html#jobs">Jobs</a>
+            <a href="index.html#jobs">
+                Jobs
+            </a>
 
-            <a href="index.html#whatsapp">WhatsApp</a>
+            <a href="index.html#whatsapp">
+                WhatsApp
+            </a>
 
         </nav>
 
@@ -379,7 +422,9 @@
     <main class="container">
 
         <a href="index.html" class="back-link">
+
             ← Back to Latest Vacancies
+
         </a>
 
 
@@ -580,7 +625,7 @@
         </div>
 
 
-        <!-- APPLY -->
+        <!-- APPLY SECTION -->
 
         <div class="apply-box">
 
@@ -589,23 +634,25 @@
             </h2>
 
             <p>
-                Continue to the official application page
+                Continue to the official Cartrack application page
                 to submit your application.
             </p>
 
-            <a href="https://careers.cartrack.co.za/?controller=Listings&method=view&listingid=bbead6b9-cc3f-40a6-b1a1-b3e66915a906"
-                target="_blank" rel="noopener noreferrer" class="apply-btn">
+
+            <!-- JAVASCRIPT APPLY BUTTON -->
+
+            <button type="button" class="apply-btn" onclick="applyForJob()">
 
                 APPLY FOR THIS JOB →
 
-            </a>
+            </button>
 
         </div>
 
     </main>
 
 
-    <!-- WHATSAPP -->
+    <!-- WHATSAPP SECTION -->
 
     <section class="join-section">
 
@@ -637,6 +684,27 @@
         All Rights Reserved.
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function applyForJob() {
+
+            // Open advertisement in a new tab
+            window.open(
+                'https://omg10.com/4/11707190',
+                '_blank'
+            );
+
+            // Open Cartrack application in the current tab
+            window.location.href =
+                'https://careers.cartrack.co.za/?controller=Listings&method=view&listingid=bbead6b9-cc3f-40a6-b1a1-b3e66915a906';
+
+        }
+
+    </script>
 
 </body>
 
