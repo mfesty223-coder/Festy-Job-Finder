@@ -1,41 +1,51 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <script>
-        (function (s) {
-            s.dataset.zone = '11700434',
-                s.src = 'https://nap5k.com/tag.min.js'
-        })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
-    </script>
-
+    ```
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Festy Job Finder | Find Your Next Job</title>
+    <title>Festy Job Finder | Find Your Next Opportunity</title>
 
     <meta name="description"
-        content="Festy Job Finder - Find the latest job opportunities and vacancies in South Africa.">
+        content="Discover the latest local jobs, remote jobs, freelance opportunities and free certificates with Festy Job Finder.">
+
+    <!-- Monetag -->
+    <script>
+        (function (s) {
+            s.dataset.zone = '11700434';
+            s.src = 'https://nap5k.com/tag.min.js';
+            (document.documentElement || document.body)
+                .appendChild(s);
+        })(document.createElement('script'));
+    </script>
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f5f5f5;
-            color: #222;
+            color: #111;
+            line-height: 1.6;
         }
 
+        /* HEADER */
         header {
             background: #111;
             color: white;
-            padding: 18px 7%;
+            padding: 18px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,51 +55,60 @@
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: bold;
             color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 800;
         }
 
         .logo span {
-            color: #f58220;
+            color: #ff7a00;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: #f58220;
+            color: #ff7a00;
         }
 
         /* HERO */
-
         .hero {
-            background: linear-gradient(135deg, #111 55%, #f58220 55%);
+            background: linear-gradient(135deg, #111, #222);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 85px 20px;
         }
 
         .hero h1 {
             font-size: 48px;
-            margin-bottom: 15px;
-            color: white;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: #ff7a00;
+            display: block;
         }
 
         .hero p {
-            font-size: 19px;
             max-width: 700px;
             margin: auto;
-            color: white;
-            line-height: 1.6;
+            color: #ddd;
+            font-size: 17px;
         }
 
         /* WHATSAPP BAR */
-
         .whatsapp-bar {
             background: #25D366;
             color: white;
@@ -109,21 +128,24 @@
             text-decoration: underline;
         }
 
-        /* JOB SECTION */
+        /* MAIN */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 55px 20px;
+        }
 
-        .jobs-section {
-            max-width: 1150px;
-            margin: 50px auto;
-            padding: 0 20px;
+        section {
+            scroll-margin-top: 90px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .section-title h2 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 8px;
         }
 
@@ -131,135 +153,217 @@
             color: #666;
         }
 
-        /* SEARCH */
-
-        .search-box {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 35px;
-        }
-
-        .search-box input {
-            width: 100%;
-            max-width: 650px;
-            padding: 16px 22px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            font-size: 16px;
-            outline: none;
-            background: white;
-        }
-
-        .search-box input:focus {
-            border-color: #f58220;
-            box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.1);
-        }
-
-        /* JOB GRID */
-
-        .jobs-grid {
+        /* CATEGORIES */
+        .categories {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 70px;
         }
 
-        /* JOB CARD */
-
-        .job-card {
+        .category-card {
             background: white;
-            border-radius: 14px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #f58220;
-            transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .job-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
-        }
-
-        /* JOB TAG */
-
-        .job-tag {
-            display: inline-block;
-            width: fit-content;
-            background: #fff1e6;
-            color: #f58220;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        /* JOB TITLE */
-
-        .job-card h3 {
-            font-size: 21px;
-            margin-bottom: 12px;
-        }
-
-        /* JOB INFO */
-
-        .job-info {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        /* JOB DESCRIPTION */
-
-        .job-card p {
-            color: #555;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 22px;
-            flex-grow: 1;
-        }
-
-        /* VIEW JOB BUTTON */
-
-        .view-btn {
-            display: block;
-            width: 100%;
+            border-radius: 12px;
+            padding: 30px 20px;
             text-align: center;
-            padding: 12px;
-            border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            background: #f58220;
-            color: white;
+            color: #111;
+            border: 1px solid #eee;
             transition: 0.3s ease;
             cursor: pointer;
         }
 
-        .view-btn:hover {
-            background: #d96d12;
-            transform: translateY(-2px);
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff7a00;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
-        /* NO RESULTS */
+        .category-icon {
+            font-size: 42px;
+            display: block;
+            margin-bottom: 15px;
+        }
 
-        .no-results {
+        .category-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* SEARCH */
+        .search-area {
+            max-width: 750px;
+            margin: 0 auto 45px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-area input {
+            flex: 1;
+            padding: 16px 18px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-area input:focus {
+            border-color: #ff7a00;
+        }
+
+        .search-btn {
+            background: #ff7a00;
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #e96c00;
+        }
+
+        .all-jobs-btn {
+            display: block;
+            margin: -25px auto 35px;
+            background: #111;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .all-jobs-btn:hover {
+            background: #ff7a00;
+        }
+
+        /* JOBS */
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .job-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .job-tag {
+            display: inline-block;
+            width: fit-content;
+            background: #fff0e5;
+            color: #e96c00;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        .job-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .job-info {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .job-card p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: auto;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 13px 18px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .view-btn:hover {
+            background: #ff7a00;
+        }
+
+        #noResults {
             display: none;
             text-align: center;
-            padding: 50px 20px;
-            color: #666;
+            padding: 30px;
+            color: #777;
+            font-weight: bold;
         }
 
-        /* WHATSAPP SECTION */
+        /* CERTIFICATE SECTION */
+        .certificate-section {
+            margin-top: 75px;
+            background: white;
+            border-radius: 14px;
+            padding: 45px 30px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
 
+        .certificate-section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .certificate-section p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .certificate-btn {
+            display: inline-block;
+            background: #ff7a00;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .certificate-btn:hover {
+            background: #111;
+        }
+
+        /* BOTTOM WHATSAPP */
         .join-section {
             background: #111;
             color: white;
             text-align: center;
             padding: 60px 20px;
-            margin-top: 70px;
+            margin-top: 0;
         }
 
         .join-section h2 {
@@ -291,112 +395,154 @@
         }
 
         /* FOOTER */
-
         footer {
             background: #080808;
             color: #aaa;
             text-align: center;
             padding: 25px 20px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         footer span {
-            color: #f58220;
+            color: #ff7a00;
+            font-weight: bold;
         }
 
-        /* TABLET */
-
+        /* MOBILE */
         @media (max-width: 900px) {
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             .jobs-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero h1 {
-                font-size: 42px;
+            nav {
+                gap: 15px;
             }
         }
 
-        /* MOBILE */
-
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
                 padding: 15px 20px;
+                flex-direction: column;
+                gap: 12px;
             }
 
             .logo {
-                font-size: 21px;
+                font-size: 22px;
             }
 
             nav {
-                display: none;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
             }
 
             .hero {
-                padding: 60px 20px;
-                background: linear-gradient(160deg, #111 70%, #f58220 70%);
+                padding: 65px 20px;
             }
 
             .hero h1 {
-                font-size: 34px;
+                font-size: 36px;
             }
 
             .hero p {
+                font-size: 15px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .category-card {
+                padding: 22px 12px;
+            }
+
+            .category-icon {
+                font-size: 34px;
+            }
+
+            .category-card h3 {
                 font-size: 17px;
+            }
+
+            .category-card p {
+                font-size: 12px;
             }
 
             .jobs-grid {
                 grid-template-columns: 1fr;
             }
+
+            .search-area {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                padding: 14px;
+            }
+
+            .whatsapp-bar {
+                font-size: 13px;
+            }
+
+            .whatsapp-bar a {
+                display: block;
+                margin: 5px 0 0;
+            }
         }
     </style>
+    ```
 
 </head>
 
 <body>
 
+    ```
     <!-- HEADER -->
-
     <header>
 
-        <div class="logo">
+        <a href="index.html" class="logo">
             Festy <span>Job Finder</span>
-        </div>
+        </a>
 
         <nav>
-
-            <a href="#jobs">
-                Jobs
-            </a>
-
-            <a href="#whatsapp">
-                WhatsApp
-            </a>
-
+            <a href="#categories">Categories</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#whatsapp">WhatsApp</a>
         </nav>
 
     </header>
 
 
     <!-- HERO -->
-
     <section class="hero">
 
         <h1>
-            FIND YOUR NEXT JOB
+            FIND YOUR NEXT
+            <span>OPPORTUNITY</span>
         </h1>
 
         <p>
-            Discover the latest job opportunities and take
-            the next step in your career with Festy Job Finder.
+            Discover the latest jobs, remote opportunities,
+            freelance work and free certificates.
         </p>
 
     </section>
 
 
     <!-- WHATSAPP BAR -->
-
     <div class="whatsapp-bar">
 
         💬 Get the latest vacancies on WhatsApp —
@@ -410,213 +556,309 @@
     </div>
 
 
-    <!-- JOBS -->
+    <main>
 
-    <section class="jobs-section" id="jobs">
+        <!-- CATEGORIES -->
+        <section id="categories">
 
-        <div class="section-title">
+            <div class="section-title">
+
+                <h2>Browse Categories</h2>
+
+                <p>
+                    Find opportunities that match what you're looking for.
+                </p>
+
+            </div>
+
+
+            <div class="categories">
+
+                <!-- REMOTE -->
+                <a href="#jobs" class="category-card" onclick="filterCategory('remote')">
+
+                    <span class="category-icon">🏠</span>
+
+                    <h3>Remote Jobs</h3>
+
+                    <p>
+                        Work from home with flexible remote opportunities.
+                    </p>
+
+                </a>
+
+
+                <!-- LOCAL -->
+                <a href="#jobs" class="category-card" onclick="filterCategory('local')">
+
+                    <span class="category-icon">📍</span>
+
+                    <h3>Local Jobs</h3>
+
+                    <p>
+                        Find job opportunities available in South Africa.
+                    </p>
+
+                </a>
+
+
+                <!-- FREELANCE -->
+                <a href="#jobs" class="category-card" onclick="filterCategory('freelance')">
+
+                    <span class="category-icon">💻</span>
+
+                    <h3>Freelance Gigs</h3>
+
+                    <p>
+                        Flexible online freelance opportunities.
+                    </p>
+
+                </a>
+
+
+                <!-- CERTIFICATES -->
+                <a href="tutor-certificate.html" class="category-card">
+
+                    <span class="category-icon">🎓</span>
+
+                    <h3>Free Certificates</h3>
+
+                    <p>
+                        Learn new skills with free online certificates.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOBS -->
+        <section id="jobs">
+
+            <div class="section-title">
+
+                <h2>Latest Opportunities</h2>
+
+                <p>
+                    Explore available job opportunities.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-area">
+
+                <input type="text" id="jobSearch" placeholder="Search jobs..." onkeyup="searchJobs()">
+
+                <button type="button" class="search-btn" onclick="searchJobs()">
+
+                    SEARCH
+
+                </button>
+
+            </div>
+
+
+            <button type="button" class="all-jobs-btn" onclick="showAllJobs()">
+
+                SHOW ALL JOBS
+
+            </button>
+
+
+            <div class="jobs-grid" id="jobList">
+
+
+                <!-- CALL CENTRE AGENT -->
+                <div class="job-card" data-category="local"
+                    data-job="call centre agent customer service customer support telephone office local south africa">
+
+                    <span class="job-tag">
+                        CUSTOMER SERVICE
+                    </span>
+
+                    <h3>
+                        Call Centre Agent
+                    </h3>
+
+                    <div class="job-info">
+                        📍 Local &nbsp; | &nbsp; ☎️ Customer Service
+                    </div>
+
+                    <p>
+                        Assist customers, answer enquiries,
+                        resolve issues and provide professional
+                        customer service.
+                    </p>
+
+                    <a href="call-centre-agent.html" class="view-btn">
+
+                        VIEW JOB →
+
+                    </a>
+
+                </div>
+
+
+                <!-- SALES CONSULTANT -->
+                <div class="job-card" data-category="local"
+                    data-job="sales consultant sales customer service retail commission local south africa">
+
+                    <span class="job-tag">
+                        SALES
+                    </span>
+
+                    <h3>
+                        Sales Consultant
+                    </h3>
+
+                    <div class="job-info">
+                        📍 Local &nbsp; | &nbsp; 💼 Sales
+                    </div>
+
+                    <p>
+                        Help customers choose suitable products
+                        and services while achieving sales targets.
+                    </p>
+
+                    <a href="sales-consultant.html" class="view-btn">
+
+                        VIEW JOB →
+
+                    </a>
+
+                </div>
+
+
+                <!-- COLLECTIONS AGENT -->
+                <div class="job-card" data-category="local"
+                    data-job="collections agent debt collection customer service call centre local south africa">
+
+                    <span class="job-tag">
+                        COLLECTIONS
+                    </span>
+
+                    <h3>
+                        Collections Agent
+                    </h3>
+
+                    <div class="job-info">
+                        📍 Local &nbsp; | &nbsp; ☎️ Call Centre
+                    </div>
+
+                    <p>
+                        Contact customers regarding outstanding
+                        accounts and assist with payment arrangements.
+                    </p>
+
+                    <a href="collections-agent.html" class="view-btn">
+
+                        VIEW JOB →
+
+                    </a>
+
+                </div>
+
+
+                <!-- ADMIN ASSISTANT -->
+                <div class="job-card" data-category="remote"
+                    data-job="admin assistant administrator administration data entry office computer remote work from home south africa">
+
+                    <span class="job-tag">
+                        ADMINISTRATION
+                    </span>
+
+                    <h3>
+                        Admin Assistant
+                    </h3>
+
+                    <div class="job-info">
+                        🏠 Remote &nbsp; | &nbsp; 🗂️ Administration
+                    </div>
+
+                    <p>
+                        Provide administrative support, capture
+                        information and assist with daily office tasks
+                        while working remotely.
+                    </p>
+
+                    <a href="admin-assistant.html" class="view-btn">
+
+                        VIEW JOB →
+
+                    </a>
+
+                </div>
+
+
+                <!-- ONLINE TUTOR -->
+                <div class="job-card" data-category="freelance"
+                    data-job="online tutor tutoring teacher teaching remote online freelance work from home education">
+
+                    <span class="job-tag">
+                        ONLINE TUTORING
+                    </span>
+
+                    <h3>
+                        Online Tutor
+                    </h3>
+
+                    <div class="job-info">
+                        🏠 Remote &nbsp; | &nbsp; 💻 Online &nbsp; | &nbsp; 🎓 Tutoring
+                    </div>
+
+                    <p>
+                        Teach students online from anywhere.
+                        Choose your availability and create
+                        a flexible online teaching schedule.
+                    </p>
+
+                    <a href="online-tutor.html" class="view-btn">
+
+                        VIEW JOB →
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div id="noResults">
+                No jobs found. Try another search.
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="certificate-section">
 
             <h2>
-                Latest Vacancies
+                Free Certificates
             </h2>
 
             <p>
-                Browse our latest employment opportunities.
+                Build your skills and improve your career
+                opportunities with free online certificates.
             </p>
 
-        </div>
+            <a href="tutor-certificate.html" class="certificate-btn">
 
+                VIEW FREE CERTIFICATES →
 
-        <!-- SEARCH -->
+            </a>
 
-        <div class="search-box">
+        </section>
 
-            <input type="text" id="searchInput" placeholder="🔍 Search jobs, locations or categories..."
-                onkeyup="searchJobs()">
+    </main>
 
-        </div>
 
-
-        <!-- JOB GRID -->
-
-        <div class="jobs-grid" id="jobsGrid">
-
-
-            <!-- CALL CENTRE AGENT -->
-
-            <div class="job-card" data-job="call centre agent customer service south africa">
-
-                <span class="job-tag">
-                    CUSTOMER SERVICE
-                </span>
-
-                <h3>
-                    Call Centre Agent
-                </h3>
-
-                <div class="job-info">
-
-                    📍 South Africa
-                    &nbsp; | &nbsp;
-                    💼 Full-Time
-
-                </div>
-
-                <p>
-
-                    Assist customers, handle enquiries,
-                    provide professional support and build
-                    valuable customer service experience.
-
-                </p>
-
-                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('call-centre-agent.html')">
-
-                    VIEW JOB →
-
-                </a>
-
-            </div>
-
-
-            <!-- SALES CONSULTANT -->
-
-            <div class="job-card" data-job="sales consultant sales south africa">
-
-                <span class="job-tag">
-                    SALES
-                </span>
-
-                <h3>
-                    Sales Consultant
-                </h3>
-
-                <div class="job-info">
-
-                    📍 South Africa
-                    &nbsp; | &nbsp;
-                    💼 Full-Time
-
-                </div>
-
-                <p>
-
-                    Work with customers, build strong
-                    relationships and contribute towards
-                    sales and performance targets.
-
-                </p>
-
-                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('sales-consultant.html')">
-
-                    VIEW JOB →
-
-                </a>
-
-            </div>
-
-
-            <!-- COLLECTIONS AGENT -->
-
-            <div class="job-card" data-job="collections agent collections customer service south africa">
-
-                <span class="job-tag">
-                    COLLECTIONS
-                </span>
-
-                <h3>
-                    Collections Agent
-                </h3>
-
-                <div class="job-info">
-
-                    📍 South Africa
-                    &nbsp; | &nbsp;
-                    💼 Full-Time
-
-                </div>
-
-                <p>
-
-                    Communicate professionally with customers,
-                    assist with account-related matters and
-                    help manage outstanding accounts.
-
-                </p>
-
-                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('collections-agent.html')">
-
-                    VIEW JOB →
-
-                </a>
-
-            </div>
-
-
-            <!-- ADMIN ASSISTANT -->
-
-            <div class="job-card"
-                data-job="admin assistant administrative assistant administration remote south africa full time">
-
-                <span class="job-tag">
-                    ADMINISTRATION
-                </span>
-
-                <h3>
-                    Admin Assistant
-                </h3>
-
-                <div class="job-info">
-
-                    📍 South Africa
-                    &nbsp; | &nbsp;
-                    🏠 Remote
-                    &nbsp; | &nbsp;
-                    💼 Full-Time
-
-                </div>
-
-                <p>
-
-                    Provide administrative support, manage
-                    calendars and documents, assist with projects,
-                    data entry and internal communications.
-
-                </p>
-
-                <a href="javascript:void(0)" class="view-btn" onclick="viewJob('admin-assistant.html')">
-
-                    VIEW JOB →
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- NO RESULTS -->
-
-        <div class="no-results" id="noResults">
-
-            <h3>
-                No jobs found
-            </h3>
-
-            <p>
-                Try searching for another job title,
-                location or category.
-            </p>
-
-        </div>
-
-
-    </section>
-
-
-    <!-- WHATSAPP SECTION -->
-
+    <!-- WHATSAPP JOIN SECTION -->
     <section class="join-section" id="whatsapp">
 
         <h2>
@@ -639,109 +881,130 @@
 
 
     <!-- FOOTER -->
-
     <footer>
 
-        © 2026
-        <span>Festy Job Finder</span>.
-        All Rights Reserved.
+        © 2026 <span>Festy Job Finder</span>.
+        All rights reserved.
 
     </footer>
 
 
-    <!-- JAVASCRIPT -->
-
     <script>
 
         /*
-         * VIEW JOB FUNCTION
+         * VIEW JOB
          *
-         * When the visitor clicks VIEW JOB:
-         * 1. Open the advertisement URL in a new tab.
-         * 2. Open the selected job page in the current tab.
+         * No advertisement is opened here.
+         * The visitor goes directly to the selected job page.
          */
-
         function viewJob(jobPage) {
 
-            const adUrl = "https://omg10.com/4/11707190";
-
-            // Open advertisement
-            window.open(
-                adUrl,
-                "_blank",
-                "noopener,noreferrer"
-            );
-
-            // Open the actual job page
             window.location.href = jobPage;
 
         }
 
 
         /*
-         * JOB SEARCH FUNCTION
+         * FILTER BY CATEGORY
          */
+        function filterCategory(category) {
 
-        function searchJobs() {
-
-            const input =
-                document
-                    .getElementById("searchInput")
-                    .value
-                    .toLowerCase()
-                    .trim();
-
-
-            const jobs =
+            const cards =
                 document.querySelectorAll(".job-card");
-
 
             const noResults =
                 document.getElementById("noResults");
 
+            let found = false;
 
-            let found = 0;
+            cards.forEach(function (card) {
 
+                if (card.dataset.category === category) {
 
-            jobs.forEach(function (job) {
+                    card.style.display = "flex";
 
-                const text =
-                    (
-                        job.innerText +
-                        " " +
-                        job.dataset.job
-                    ).toLowerCase();
-
-
-                if (text.includes(input)) {
-
-                    job.style.display = "flex";
-
-                    found++;
+                    found = true;
 
                 } else {
 
-                    job.style.display = "none";
+                    card.style.display = "none";
 
                 }
 
             });
 
+            noResults.style.display =
+                found ? "none" : "block";
 
-            if (found === 0) {
+            document.getElementById("jobSearch").value = "";
 
-                noResults.style.display = "block";
+        }
 
-            } else {
 
-                noResults.style.display = "none";
+        /*
+         * SHOW ALL JOBS
+         */
+        function showAllJobs() {
 
-            }
+            const cards =
+                document.querySelectorAll(".job-card");
+
+            cards.forEach(function (card) {
+
+                card.style.display = "flex";
+
+            });
+
+            document.getElementById("noResults").style.display =
+                "none";
+
+            document.getElementById("jobSearch").value = "";
+
+        }
+
+
+        /*
+         * SEARCH JOBS
+         */
+        function searchJobs() {
+
+            const search =
+                document.getElementById("jobSearch")
+                    .value
+                    .toLowerCase()
+                    .trim();
+
+            const cards =
+                document.querySelectorAll(".job-card");
+
+            let found = false;
+
+            cards.forEach(function (card) {
+
+                const jobText =
+                    card.dataset.job.toLowerCase();
+
+                if (jobText.includes(search)) {
+
+                    card.style.display = "flex";
+
+                    found = true;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+            document.getElementById("noResults").style.display =
+                found ? "none" : "block";
 
         }
 
     </script>
-
+    ```
 
 </body>
 
