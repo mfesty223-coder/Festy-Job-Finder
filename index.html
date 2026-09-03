@@ -5,15 +5,6 @@
 <head>
 
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Festy Job Finder | Find Your Next Opportunity</title>
-
-    <meta name="description"
-        content="Discover the latest local jobs, remote jobs, freelance opportunities and free certificates with Festy Job Finder.">
-
-    <!-- Monetag -->
     <script>
         (function (s) {
             s.dataset.zone = '11700434';
@@ -23,6 +14,14 @@
         })(document.createElement('script'));
     </script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Festy Job Finder | Find Your Next Opportunity</title>
+
+    <meta name="description"
+        content="Discover the latest local jobs, remote opportunities, freelance work and free certificates with Festy Job Finder.">
+
     <style>
         * {
             box-sizing: border-box;
@@ -30,63 +29,70 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
+            background: #f7f7f7;
             color: #111;
             line-height: 1.6;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+        /* ================= HEADER ================= */
+
         header {
             background: #111;
             color: white;
-            padding: 18px 6%;
+            padding: 18px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo {
-            color: white;
-            text-decoration: none;
             font-size: 25px;
-            font-weight: 800;
+            font-weight: 900;
+            color: white;
         }
 
         .logo span {
-            color: #ff7a00;
+            color: white;
+        }
+
+        .logo strong {
+            color: #f58220;
         }
 
         nav {
             display: flex;
-            gap: 25px;
+            gap: 22px;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
+            font-weight: 700;
             font-size: 14px;
-            font-weight: 600;
+            transition: 0.2s;
         }
 
         nav a:hover {
-            color: #ff7a00;
+            color: #f58220;
         }
 
-        /* HERO */
+        /* ================= HERO ================= */
+
         .hero {
-            background: linear-gradient(135deg, #111, #222);
+            background: linear-gradient(135deg, #111 55%, #f58220 55%);
             color: white;
             text-align: center;
             padding: 85px 20px;
+            border-bottom: 4px solid #f58220;
         }
 
         .hero h1 {
@@ -94,99 +100,91 @@
             line-height: 1.1;
             margin-bottom: 20px;
             font-weight: 900;
+            color: white;
         }
 
         .hero h1 span {
-            color: #ff7a00;
+            color: white;
             display: block;
         }
 
         .hero p {
             max-width: 700px;
             margin: auto;
-            color: #ddd;
+            color: white;
             font-size: 17px;
+            font-weight: 500;
         }
 
-        /* WHATSAPP BAR */
+        /* ================= WHATSAPP BAR ================= */
+
         .whatsapp-bar {
             background: #25D366;
-            color: white;
+            padding: 14px 20px;
             text-align: center;
-            padding: 15px 20px;
-            font-size: 15px;
         }
 
         .whatsapp-bar a {
             color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 8px;
+            font-weight: 800;
         }
 
-        .whatsapp-bar a:hover {
-            text-decoration: underline;
+        .whatsapp-bar:hover {
+            background: #1ebe5d;
         }
 
-        /* MAIN */
+        /* ================= MAIN ================= */
+
         main {
-            max-width: 1200px;
+            max-width: 1150px;
             margin: auto;
-            padding: 55px 20px;
-        }
-
-        section {
-            scroll-margin-top: 90px;
+            padding: 50px 20px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .section-title h2 {
             font-size: 32px;
-            margin-bottom: 8px;
+            font-weight: 900;
+            margin-bottom: 30px;
         }
 
-        .section-title p {
-            color: #666;
+        .section-title span {
+            color: #f58220;
         }
 
-        /* CATEGORIES */
+        /* ================= CATEGORIES ================= */
+
         .categories {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .category-card {
             background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
+            border: 2px solid #eee;
+            border-radius: 14px;
+            padding: 28px 20px;
             text-align: center;
-            text-decoration: none;
-            color: #111;
-            border: 1px solid #eee;
-            transition: 0.3s ease;
             cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
         }
 
         .category-card:hover {
             transform: translateY(-5px);
-            border-color: #ff7a00;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: #f58220;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
         .category-icon {
-            font-size: 42px;
-            display: block;
-            margin-bottom: 15px;
+            font-size: 38px;
+            margin-bottom: 12px;
         }
 
         .category-card h3 {
-            font-size: 20px;
+            font-size: 19px;
             margin-bottom: 8px;
         }
 
@@ -195,59 +193,48 @@
             font-size: 14px;
         }
 
-        /* SEARCH */
-        .search-area {
-            max-width: 750px;
-            margin: 0 auto 45px;
+        /* ================= JOB SEARCH ================= */
+
+        .job-tools {
             display: flex;
+            justify-content: center;
             gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
-        .search-area input {
-            flex: 1;
-            padding: 16px 18px;
-            border: 1px solid #ddd;
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 18px;
+            border: 2px solid #ddd;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 16px;
             outline: none;
         }
 
-        .search-area input:focus {
-            border-color: #ff7a00;
+        .search-box:focus {
+            border-color: #f58220;
         }
 
-        .search-btn {
-            background: #ff7a00;
-            color: white;
-            border: none;
-            padding: 0 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .search-btn:hover {
-            background: #e96c00;
-        }
-
-        .all-jobs-btn {
-            display: block;
-            margin: -25px auto 35px;
+        .show-all-btn {
             background: #111;
             color: white;
             border: none;
-            padding: 12px 22px;
-            border-radius: 6px;
+            padding: 15px 22px;
+            border-radius: 8px;
+            font-weight: 800;
             cursor: pointer;
-            font-weight: bold;
+            transition: 0.2s;
         }
 
-        .all-jobs-btn:hover {
-            background: #ff7a00;
+        .show-all-btn:hover {
+            background: #f58220;
         }
 
-        /* JOBS */
-        .jobs-grid {
+        /* ================= JOB CARDS ================= */
+
+        .jobs {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
@@ -255,204 +242,183 @@
 
         .job-card {
             background: white;
-            padding: 28px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-            display: flex;
-            flex-direction: column;
-            transition: 0.3s ease;
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
         }
 
         .job-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: #f58220;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
-        .job-tag {
+        .job-category {
             display: inline-block;
-            width: fit-content;
             background: #fff0e5;
-            color: #e96c00;
-            padding: 6px 10px;
-            border-radius: 5px;
-            font-size: 11px;
-            font-weight: bold;
-            margin-bottom: 14px;
+            color: #f58220;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
         .job-card h3 {
-            font-size: 22px;
+            font-size: 21px;
             margin-bottom: 10px;
         }
 
-        .job-info {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
         .job-card p {
-            color: #555;
+            color: #666;
             font-size: 14px;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
-        .view-btn {
-            display: inline-block;
-            margin-top: auto;
+        .job-button {
+            display: block;
+            width: 100%;
+            background: #f58220;
+            color: white;
+            text-align: center;
+            padding: 12px 15px;
+            border-radius: 7px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .job-button:hover {
+            background: #d96d12;
+        }
+
+        /* ================= CERTIFICATE ================= */
+
+        .certificate-section {
+            margin-top: 70px;
             background: #111;
             color: white;
-            text-decoration: none;
+            border-radius: 16px;
+            padding: 45px 25px;
             text-align: center;
-            padding: 13px 18px;
-            border-radius: 7px;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .view-btn:hover {
-            background: #ff7a00;
-        }
-
-        #noResults {
-            display: none;
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            font-weight: bold;
-        }
-
-        /* CERTIFICATE SECTION */
-        .certificate-section {
-            margin-top: 75px;
-            background: white;
-            border-radius: 14px;
-            padding: 45px 30px;
-            text-align: center;
-            border: 1px solid #eee;
         }
 
         .certificate-section h2 {
             font-size: 30px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .certificate-section h2 span {
+            color: #f58220;
         }
 
         .certificate-section p {
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .certificate-btn {
-            display: inline-block;
-            background: #ff7a00;
-            color: white;
-            text-decoration: none;
-            padding: 14px 25px;
-            border-radius: 7px;
-            font-weight: bold;
-        }
-
-        .certificate-btn:hover {
-            background: #111;
-        }
-
-        /* BOTTOM WHATSAPP */
-        .join-section {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 0;
-        }
-
-        .join-section h2 {
-            font-size: 30px;
-            margin-bottom: 12px;
-        }
-
-        .join-section p {
-            margin-bottom: 25px;
+            max-width: 700px;
+            margin: 0 auto 25px;
             color: #ddd;
-            line-height: 1.6;
         }
 
-        .whatsapp-btn {
+        .certificate-button {
             display: inline-block;
-            background: #25D366;
+            background: #f58220;
             color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: 0.3s ease;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 800;
+            transition: 0.2s;
         }
 
-        .whatsapp-btn:hover {
-            background: #1ebe5d;
-            transform: translateY(-2px);
+        .certificate-button:hover {
+            background: #d96d12;
         }
 
-        /* FOOTER */
+        /* ================= WHATSAPP SECTION ================= */
+
+        .whatsapp-section {
+            margin-top: 50px;
+            background: #25D366;
+            border-radius: 15px;
+            padding: 35px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .whatsapp-section h2 {
+            margin-bottom: 10px;
+            font-size: 27px;
+        }
+
+        .whatsapp-section p {
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: white;
+            color: #128C7E;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 900;
+            transition: 0.2s;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.03);
+        }
+
+        /* ================= FOOTER ================= */
+
         footer {
             background: #080808;
             color: #aaa;
             text-align: center;
-            padding: 25px 20px;
-            font-size: 13px;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
         }
 
-        footer span {
-            color: #ff7a00;
-            font-weight: bold;
+        footer strong {
+            color: #f58220;
         }
 
-        /* MOBILE */
+        /* ================= MOBILE ================= */
+
         @media (max-width: 900px) {
 
             .categories {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .jobs-grid {
+            .jobs {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            nav {
-                gap: 15px;
-            }
         }
 
         @media (max-width: 650px) {
 
             header {
-                padding: 15px 20px;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .logo {
-                font-size: 22px;
+                justify-content: center;
+                text-align: center;
             }
 
             nav {
-                width: 100%;
                 justify-content: center;
-                flex-wrap: wrap;
-                gap: 12px;
-            }
-
-            nav a {
-                font-size: 12px;
+                gap: 14px;
             }
 
             .hero {
-                padding: 65px 20px;
+                padding: 65px 18px;
+                background: linear-gradient(160deg,
+                        #111 58%,
+                        #f58220 58%);
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 38px;
             }
 
             .hero p {
@@ -460,46 +426,21 @@
             }
 
             .categories {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .category-card {
-                padding: 22px 12px;
-            }
-
-            .category-icon {
-                font-size: 34px;
-            }
-
-            .category-card h3 {
-                font-size: 17px;
-            }
-
-            .category-card p {
-                font-size: 12px;
-            }
-
-            .jobs-grid {
                 grid-template-columns: 1fr;
             }
 
-            .search-area {
-                flex-direction: column;
+            .jobs {
+                grid-template-columns: 1fr;
             }
 
-            .search-btn {
-                padding: 14px;
+            main {
+                padding: 35px 15px;
             }
 
-            .whatsapp-bar {
-                font-size: 13px;
+            .section-title {
+                font-size: 27px;
             }
 
-            .whatsapp-bar a {
-                display: block;
-                margin: 5px 0 0;
-            }
         }
     </style>
     
@@ -509,24 +450,28 @@
 <body>
 
     
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
+
     <header>
 
-        <a href="index.html" class="logo">
-            Festy <span>Job Finder</span>
-        </a>
+        <div class="logo">
+            <span>Festy</span> <strong>Job Finder</strong>
+        </div>
 
         <nav>
             <a href="#categories">Categories</a>
             <a href="#jobs">Jobs</a>
             <a href="#certificates">Certificates</a>
-            <a href="#whatsapp">WhatsApp</a>
+            <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o">
+                WhatsApp
+            </a>
         </nav>
 
     </header>
 
 
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
+
     <section class="hero">
 
         <h1>
@@ -535,22 +480,19 @@
         </h1>
 
         <p>
-            Discover the latest jobs, remote opportunities,
-            freelance work and free certificates.
+            Discover the latest jobs, remote opportunities, freelance work
+            and free certificates.
         </p>
 
     </section>
 
 
-    <!-- WHATSAPP BAR -->
+    <!-- ================= WHATSAPP BAR ================= -->
+
     <div class="whatsapp-bar">
 
-        💬 Get the latest vacancies on WhatsApp —
-
-        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer">
-
-            JOIN OUR WHATSAPP CHANNEL →
-
+        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o">
+            📲 Join our WhatsApp Channel for new opportunities
         </a>
 
     </div>
@@ -558,73 +500,79 @@
 
     <main>
 
-        <!-- CATEGORIES -->
+        <!-- ================= CATEGORIES ================= -->
+
         <section id="categories">
 
-            <div class="section-title">
-
-                <h2>Browse Categories</h2>
-
-                <p>
-                    Find opportunities that match what you're looking for.
-                </p>
-
-            </div>
-
+            <h2 class="section-title">
+                Browse <span>Categories</span>
+            </h2>
 
             <div class="categories">
 
-                <!-- REMOTE -->
-                <a href="#jobs" class="category-card" onclick="filterCategory('remote')">
+                <div class="category-card" onclick="filterCategory('remote')">
 
-                    <span class="category-icon">🏠</span>
+                    <div class="category-icon">
+                        💻
+                    </div>
 
-                    <h3>Remote Jobs</h3>
-
-                    <p>
-                        Work from home with flexible remote opportunities.
-                    </p>
-
-                </a>
-
-
-                <!-- LOCAL -->
-                <a href="#jobs" class="category-card" onclick="filterCategory('local')">
-
-                    <span class="category-icon">📍</span>
-
-                    <h3>Local Jobs</h3>
+                    <h3>
+                        Remote Jobs
+                    </h3>
 
                     <p>
-                        Find job opportunities available in South Africa.
+                        Work from home opportunities.
                     </p>
 
-                </a>
+                </div>
 
 
-                <!-- FREELANCE -->
-                <a href="#jobs" class="category-card" onclick="filterCategory('freelance')">
+                <div class="category-card" onclick="filterCategory('local')">
 
-                    <span class="category-icon">💻</span>
+                    <div class="category-icon">
+                        🏢
+                    </div>
 
-                    <h3>Freelance Gigs</h3>
+                    <h3>
+                        Local Jobs
+                    </h3>
 
                     <p>
-                        Flexible online freelance opportunities.
+                        Jobs available in South Africa.
                     </p>
 
-                </a>
+                </div>
 
 
-                <!-- CERTIFICATES -->
+                <div class="category-card" onclick="filterCategory('freelance')">
+
+                    <div class="category-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Freelance Gigs
+                    </h3>
+
+                    <p>
+                        Flexible online freelance work.
+                    </p>
+
+                </div>
+
+
                 <a href="tutor-certificate.html" class="category-card">
 
-                    <span class="category-icon">🎓</span>
+                    <div class="category-icon">
+                        🎓
+                    </div>
 
-                    <h3>Free Certificates</h3>
+                    <h3>
+                        Free Certificates
+                    </h3>
 
                     <p>
-                        Learn new skills with free online certificates.
+                        Learn new skills and earn certificates.
                     </p>
 
                 </a>
@@ -634,223 +582,186 @@
         </section>
 
 
-        <!-- JOBS -->
+        <!-- ================= JOBS ================= -->
+
         <section id="jobs">
 
-            <div class="section-title">
-
-                <h2>Latest Opportunities</h2>
-
-                <p>
-                    Explore available job opportunities.
-                </p>
-
-            </div>
+            <h2 class="section-title">
+                Latest <span>Job Opportunities</span>
+            </h2>
 
 
-            <!-- SEARCH -->
-            <div class="search-area">
+            <div class="job-tools">
 
-                <input type="text" id="jobSearch" placeholder="Search jobs..." onkeyup="searchJobs()">
+                <input type="text" id="jobSearch" class="search-box" placeholder="Search for a job..."
+                    onkeyup="searchJobs()">
 
-                <button type="button" class="search-btn" onclick="searchJobs()">
-
-                    SEARCH
-
+                <button class="show-all-btn" onclick="showAllJobs()">
+                    Show All
                 </button>
 
             </div>
 
 
-            <button type="button" class="all-jobs-btn" onclick="showAllJobs()">
-
-                SHOW ALL JOBS
-
-            </button>
+            <div class="jobs" id="jobList">
 
 
-            <div class="jobs-grid" id="jobList">
+                <!-- CALL CENTRE -->
 
+                <div class="job-card" data-category="local" data-job="call centre agent customer service">
 
-                <!-- CALL CENTRE AGENT -->
-                <div class="job-card" data-category="local"
-                    data-job="call centre agent customer service customer support telephone office local south africa">
-
-                    <span class="job-tag">
-                        CUSTOMER SERVICE
+                    <span class="job-category">
+                        Local Job
                     </span>
 
                     <h3>
                         Call Centre Agent
                     </h3>
 
-                    <div class="job-info">
-                        📍 Local &nbsp; | &nbsp; ☎️ Customer Service
-                    </div>
-
                     <p>
-                        Assist customers, answer enquiries,
-                        resolve issues and provide professional
-                        customer service.
+                        Customer service and call centre opportunity.
                     </p>
 
-                    <a href="call-centre-agent.html" class="view-btn">
-
-                        VIEW JOB →
-
-                    </a>
+                    <button class="job-button" onclick="viewJob('call-centre-agent.html')">
+                        View Job
+                    </button>
 
                 </div>
 
 
                 <!-- SALES CONSULTANT -->
-                <div class="job-card" data-category="local"
-                    data-job="sales consultant sales customer service retail commission local south africa">
 
-                    <span class="job-tag">
-                        SALES
+                <div class="job-card" data-category="local" data-job="sales consultant sales">
+
+                    <span class="job-category">
+                        Local Job
                     </span>
 
                     <h3>
                         Sales Consultant
                     </h3>
 
-                    <div class="job-info">
-                        📍 Local &nbsp; | &nbsp; 💼 Sales
-                    </div>
-
                     <p>
-                        Help customers choose suitable products
-                        and services while achieving sales targets.
+                        Customer-facing sales opportunity.
                     </p>
 
-                    <a href="sales-consultant.html" class="view-btn">
-
-                        VIEW JOB →
-
-                    </a>
+                    <button class="job-button" onclick="viewJob('sales-consultant.html')">
+                        View Job
+                    </button>
 
                 </div>
 
 
-                <!-- COLLECTIONS AGENT -->
-                <div class="job-card" data-category="local"
-                    data-job="collections agent debt collection customer service call centre local south africa">
+                <!-- COLLECTIONS -->
 
-                    <span class="job-tag">
-                        COLLECTIONS
+                <div class="job-card" data-category="local" data-job="collections agent collections">
+
+                    <span class="job-category">
+                        Local Job
                     </span>
 
                     <h3>
                         Collections Agent
                     </h3>
 
-                    <div class="job-info">
-                        📍 Local &nbsp; | &nbsp; ☎️ Call Centre
-                    </div>
-
                     <p>
-                        Contact customers regarding outstanding
-                        accounts and assist with payment arrangements.
+                        Collections and customer account opportunity.
                     </p>
 
-                    <a href="collections-agent.html" class="view-btn">
-
-                        VIEW JOB →
-
-                    </a>
+                    <button class="job-button" onclick="viewJob('collections-agent.html')">
+                        View Job
+                    </button>
 
                 </div>
 
 
-                <!-- ADMIN ASSISTANT -->
-                <div class="job-card" data-category="remote"
-                    data-job="admin assistant administrator administration data entry office computer remote work from home south africa">
+                <!-- ADMIN -->
 
-                    <span class="job-tag">
-                        ADMINISTRATION
+                <div class="job-card" data-category="remote" data-job="admin assistant administration remote">
+
+                    <span class="job-category">
+                        Remote Job
                     </span>
 
                     <h3>
                         Admin Assistant
                     </h3>
 
-                    <div class="job-info">
-                        🏠 Remote &nbsp; | &nbsp; 🗂️ Administration
-                    </div>
-
                     <p>
-                        Provide administrative support, capture
-                        information and assist with daily office tasks
-                        while working remotely.
+                        Remote administrative support opportunity.
                     </p>
 
-                    <a href="admin-assistant.html" class="view-btn">
-
-                        VIEW JOB →
-
-                    </a>
+                    <button class="job-button" onclick="viewJob('admin-assistant.html')">
+                        View Job
+                    </button>
 
                 </div>
 
 
                 <!-- ONLINE TUTOR -->
-                <div class="job-card" data-category="freelance"
-                    data-job="online tutor tutoring teacher teaching remote online freelance work from home education">
 
-                    <span class="job-tag">
-                        ONLINE TUTORING
+                <div class="job-card" data-category="freelance" data-job="online tutor tutoring teaching freelance">
+
+                    <span class="job-category">
+                        Freelance
                     </span>
 
                     <h3>
                         Online Tutor
                     </h3>
 
-                    <div class="job-info">
-                        🏠 Remote &nbsp; | &nbsp; 💻 Online &nbsp; | &nbsp; 🎓 Tutoring
-                    </div>
-
                     <p>
-                        Teach students online from anywhere.
-                        Choose your availability and create
-                        a flexible online teaching schedule.
+                        Flexible online tutoring and teaching opportunity.
                     </p>
 
-                    <a href="online-tutor.html" class="view-btn">
-
-                        VIEW JOB →
-
-                    </a>
+                    <button class="job-button" onclick="viewJob('online-tutor.html')">
+                        View Job
+                    </button>
 
                 </div>
 
 
             </div>
 
+        </section>
 
-            <div id="noResults">
-                No jobs found. Try another search.
-            </div>
+
+        <!-- ================= CERTIFICATES ================= -->
+
+        <section id="certificates" class="certificate-section">
+
+            <h2>
+                Learn New Skills & Get
+                <span>Free Certificates</span>
+            </h2>
+
+            <p>
+                Improve your skills and boost your CV with free online
+                learning opportunities and certificates.
+            </p>
+
+            <a href="tutor-certificate.html" class="certificate-button">
+                View Free Certificates
+            </a>
 
         </section>
 
 
-        <!-- CERTIFICATES -->
-        <section id="certificates" class="certificate-section">
+        <!-- ================= WHATSAPP ================= -->
+
+        <section class="whatsapp-section">
 
             <h2>
-                Free Certificates
+                Never Miss a New Opportunity
             </h2>
 
             <p>
-                Build your skills and improve your career
-                opportunities with free online certificates.
+                Join the Festy Job Finder WhatsApp Channel and receive
+                new job opportunities directly.
             </p>
 
-            <a href="tutor-certificate.html" class="certificate-btn">
-
-                VIEW FREE CERTIFICATES →
-
+            <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" class="whatsapp-button">
+                Join WhatsApp Channel
             </a>
 
         </section>
@@ -858,45 +769,26 @@
     </main>
 
 
-    <!-- WHATSAPP JOIN SECTION -->
-    <section class="join-section" id="whatsapp">
+    <!-- ================= FOOTER ================= -->
 
-        <h2>
-            Don't Miss New Opportunities!
-        </h2>
-
-        <p>
-            Join our WhatsApp channel and get notified
-            whenever new vacancies are added.
-        </p>
-
-        <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
-            class="whatsapp-btn">
-
-            💬 JOIN OUR WHATSAPP CHANNEL
-
-        </a>
-
-    </section>
-
-
-    <!-- FOOTER -->
     <footer>
 
-        © 2026 <span>Festy Job Finder</span>.
-        All rights reserved.
+        <p>
+            © 2026 <strong>Festy Job Finder</strong>.
+            All rights reserved.
+        </p>
+
+        <p>
+            Find jobs. Build skills. Find your next opportunity.
+        </p>
 
     </footer>
 
 
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script>
 
-        /*
-         * VIEW JOB
-         *
-         * No advertisement is opened here.
-         * The visitor goes directly to the selected job page.
-         */
         function viewJob(jobPage) {
 
             window.location.href = jobPage;
@@ -904,102 +796,78 @@
         }
 
 
-        /*
-         * FILTER BY CATEGORY
-         */
         function filterCategory(category) {
 
-            const cards =
-                document.querySelectorAll(".job-card");
+            const jobs =
+                document.querySelectorAll('.job-card');
 
-            const noResults =
-                document.getElementById("noResults");
+            jobs.forEach(function (job) {
 
-            let found = false;
+                if (job.dataset.category === category) {
 
-            cards.forEach(function (card) {
-
-                if (card.dataset.category === category) {
-
-                    card.style.display = "flex";
-
-                    found = true;
+                    job.style.display = 'block';
 
                 } else {
 
-                    card.style.display = "none";
+                    job.style.display = 'none';
 
                 }
 
             });
 
-            noResults.style.display =
-                found ? "none" : "block";
-
-            document.getElementById("jobSearch").value = "";
+            document
+                .getElementById('jobs')
+                .scrollIntoView({
+                    behavior: 'smooth'
+                });
 
         }
 
 
-        /*
-         * SHOW ALL JOBS
-         */
         function showAllJobs() {
 
-            const cards =
-                document.querySelectorAll(".job-card");
+            const jobs =
+                document.querySelectorAll('.job-card');
 
-            cards.forEach(function (card) {
+            jobs.forEach(function (job) {
 
-                card.style.display = "flex";
+                job.style.display = 'block';
 
             });
 
-            document.getElementById("noResults").style.display =
-                "none";
-
-            document.getElementById("jobSearch").value = "";
+            document.getElementById('jobSearch').value = '';
 
         }
 
 
-        /*
-         * SEARCH JOBS
-         */
         function searchJobs() {
 
             const search =
-                document.getElementById("jobSearch")
+                document
+                    .getElementById('jobSearch')
                     .value
                     .toLowerCase()
                     .trim();
 
-            const cards =
-                document.querySelectorAll(".job-card");
+            const jobs =
+                document.querySelectorAll('.job-card');
 
-            let found = false;
+            jobs.forEach(function (job) {
 
-            cards.forEach(function (card) {
+                const jobName =
+                    job.dataset.job.toLowerCase();
 
-                const jobText =
-                    card.dataset.job.toLowerCase();
+                if (jobName.includes(search)) {
 
-                if (jobText.includes(search)) {
-
-                    card.style.display = "flex";
-
-                    found = true;
+                    job.style.display = 'block';
 
                 } else {
 
-                    card.style.display = "none";
+                    job.style.display = 'none';
 
                 }
 
             });
-
-            document.getElementById("noResults").style.display =
-                found ? "none" : "block";
 
         }
 
