@@ -4,12 +4,22 @@
 
 <head>
 
-    
-    <!-- Monetag Script -->
+    <!-- MONETAG SCRIPT -->
     <script>
         (function (s) {
             s.dataset.zone = '11700434';
             s.src = 'https://nap5k.com/tag.min.js';
+
+            (document.documentElement || document.body)
+                .appendChild(s);
+        })(document.createElement('script'));
+    </script>
+
+    <!-- MONETAG VIGNETTE -->
+    <script>
+        (function (s) {
+            s.dataset.zone = '11715453';
+            s.src = 'https://n6wxm.com/vignette.min.js';
 
             (document.documentElement || document.body)
                 .appendChild(s);
@@ -25,6 +35,10 @@
         content="Get started with a free online 120-hour TEFL certificate course through Festy Job Finder.">
 
     <style>
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -38,7 +52,10 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #111;
@@ -53,14 +70,19 @@
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: bold;
             color: white;
             text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
         }
 
         .logo span {
             color: #f58220;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
@@ -68,13 +90,17 @@
             text-decoration: none;
             margin-left: 25px;
             font-weight: bold;
+            font-size: 14px;
         }
 
         nav a:hover {
             color: #f58220;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .certificate-hero {
             background: linear-gradient(135deg,
@@ -104,13 +130,16 @@
         }
 
         .certificate-hero p {
-            font-size: 18px;
-            color: white;
             max-width: 700px;
             margin: auto;
+            font-size: 18px;
+            color: white;
         }
 
-        /* WHATSAPP BAR */
+
+        /* =========================
+           WHATSAPP BAR
+        ========================= */
 
         .whatsapp-bar {
             background: #25D366;
@@ -131,7 +160,10 @@
             text-decoration: underline;
         }
 
-        /* MAIN CONTAINER */
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
 
         .container {
             max-width: 1000px;
@@ -139,7 +171,10 @@
             padding: 0 20px;
         }
 
-        /* BACK LINK */
+
+        /* =========================
+           BACK LINK
+        ========================= */
 
         .back-link {
             display: inline-block;
@@ -153,15 +188,16 @@
             text-decoration: underline;
         }
 
-        /* MAIN CARD */
+
+        /* =========================
+           CERTIFICATE CARD
+        ========================= */
 
         .certificate-card {
             background: white;
             padding: 35px;
             border-radius: 15px;
-            box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.08);
-
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             border-top: 4px solid #f58220;
         }
 
@@ -192,7 +228,10 @@
             margin-bottom: 9px;
         }
 
-        /* INFORMATION GRID */
+
+        /* =========================
+           INFORMATION GRID
+        ========================= */
 
         .info-grid {
             display: grid;
@@ -220,7 +259,10 @@
             color: #333;
         }
 
-        /* HIGHLIGHT */
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
 
         .highlight {
             background: #fff7f0;
@@ -234,7 +276,10 @@
             color: #111;
         }
 
-        /* START COURSE BOX */
+
+        /* =========================
+           START COURSE BOX
+        ========================= */
 
         .start-box {
             background: #111;
@@ -256,7 +301,10 @@
             margin-bottom: 22px;
         }
 
-        /* START BUTTON */
+
+        /* =========================
+           START BUTTON
+        ========================= */
 
         .start-btn {
             display: inline-block;
@@ -277,7 +325,10 @@
             transform: translateY(-2px);
         }
 
-        /* WHATSAPP SECTION */
+
+        /* =========================
+           WHATSAPP SECTION
+        ========================= */
 
         .join-section {
             background: #111;
@@ -305,13 +356,18 @@
             padding: 14px 28px;
             border-radius: 30px;
             font-weight: bold;
+            transition: 0.3s ease;
         }
 
         .whatsapp-btn:hover {
             background: #1ebe5d;
+            transform: translateY(-2px);
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #080808;
@@ -325,7 +381,10 @@
             color: #f58220;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -353,12 +412,12 @@
                 font-size: 16px;
             }
 
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
             .certificate-card {
                 padding: 25px 20px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
             }
 
             .start-box {
@@ -369,16 +428,30 @@
                 width: 100%;
             }
 
+            .whatsapp-bar {
+                font-size: 14px;
+            }
+
+            .whatsapp-bar a {
+                display: block;
+                margin: 5px 0 0;
+            }
+
+            .join-section {
+                margin-top: 40px;
+            }
+
         }
     </style>
-    
 
 </head>
 
 <body>
 
-    
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header>
 
@@ -396,7 +469,11 @@
                 Jobs
             </a>
 
-            <a href="index.html#whatsapp">
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="#whatsapp">
                 WhatsApp
             </a>
 
@@ -405,7 +482,9 @@
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="certificate-hero">
 
@@ -425,7 +504,9 @@
     </section>
 
 
-    <!-- WHATSAPP BAR -->
+    <!-- =========================
+         WHATSAPP BAR
+    ========================= -->
 
     <div class="whatsapp-bar">
 
@@ -440,7 +521,9 @@
     </div>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
 
     <main class="container">
 
@@ -454,9 +537,12 @@
         <div class="certificate-card">
 
 
+            <!-- COURSE TITLE -->
+
             <h2>
                 120-Hour TEFL Certificate
             </h2>
+
 
             <p>
                 Looking to improve your teaching skills or
@@ -466,7 +552,9 @@
             </p>
 
 
-            <!-- INFORMATION -->
+            <!-- =========================
+                 INFORMATION
+            ========================= -->
 
             <div class="info-grid">
 
@@ -511,7 +599,9 @@
             </div>
 
 
-            <!-- HIGHLIGHT -->
+            <!-- =========================
+                 HIGHLIGHT
+            ========================= -->
 
             <div class="highlight">
 
@@ -526,7 +616,9 @@
             </div>
 
 
-            <!-- WHAT YOU LEARN -->
+            <!-- =========================
+                 WHAT YOU'LL LEARN
+            ========================= -->
 
             <h3>
                 What You'll Learn
@@ -565,7 +657,9 @@
             </ul>
 
 
-            <!-- REQUIREMENTS -->
+            <!-- =========================
+                 REQUIREMENTS
+            ========================= -->
 
             <h3>
                 Course Requirements
@@ -594,7 +688,9 @@
             </ul>
 
 
-            <!-- COURSE ACCESS -->
+            <!-- =========================
+                 COURSE ACCESS
+            ========================= -->
 
             <h3>
                 Online Course Access
@@ -613,7 +709,9 @@
             </p>
 
 
-            <!-- START COURSE -->
+            <!-- =========================
+                 START COURSE
+            ========================= -->
 
             <div class="start-box">
 
@@ -626,6 +724,18 @@
                     begin building your teaching skills.
                 </p>
 
+
+                <!-- GENTLE REMINDER -->
+
+                <p style="
+                    font-size: 13px;
+                    color: #ccc;
+                    margin: 5px 0 15px;
+                ">
+                    ✨ Tip: Links open in a new window. Simply switch tabs or press back to view your application!
+                </p>
+
+
                 <button type="button" class="start-btn" onclick="startCourse()">
 
                     START FREE TEFL COURSE →
@@ -634,23 +744,29 @@
 
             </div>
 
+
         </div>
 
     </main>
 
 
-    <!-- WHATSAPP SECTION -->
+    <!-- =========================
+         WHATSAPP SECTION
+    ========================= -->
 
-    <section class="join-section">
+    <section class="join-section" id="whatsapp">
 
         <h2>
             Don't Miss New Opportunities!
         </h2>
 
         <p>
+
             Join our WhatsApp channel and get notified
             whenever new vacancies are added.
+
         </p>
+
 
         <a href="https://whatsapp.com/channel/0029VbDRcv9EgGfOYux73v3o" target="_blank" rel="noopener noreferrer"
             class="whatsapp-btn">
@@ -662,7 +778,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -673,16 +791,18 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
 
         function startCourse() {
 
             /*
-             * First open the advertisement
-             * in a new browser tab.
+             * Open advertisement in a new tab.
              */
+
             window.open(
                 'https://omg10.com/4/11707190',
                 '_blank'
@@ -690,9 +810,10 @@
 
 
             /*
-             * Then continue to the free
+             * Continue to the free
              * TEFL course in the current tab.
              */
+
             window.location.href =
                 'https://teacherrecord.com/tefl-certificate';
 
@@ -701,9 +822,6 @@
 
         /*
          * Mobile touch listener.
-         * Helps trigger the ad system when
-         * the visitor first interacts with
-         * the page on a mobile device.
          */
 
         document.addEventListener(
@@ -723,7 +841,7 @@
         );
 
     </script>
-    
+
 
 </body>
 
